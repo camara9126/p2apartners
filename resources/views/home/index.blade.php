@@ -9,21 +9,21 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
  
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
     
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
 
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ asset('css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 	<!-- Icon Image -->
     <link rel="shortcut icon" href="images/logo.jpeg">
   </head>
   <body>
 
-    <div class="wrap">
-			<div class="container">
+    <div class="wrap py-1">
+			<div class="container py-1">
 				<div class="row">
 					<div class="col-md-12">
 						<div class="bg-wrap">
@@ -53,14 +53,14 @@
 		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	    	<a class="navbar-brand" href="/">
-          <img src="images/logo.jpeg" width="100">
-        </a>
+				<img src="images/logo.jpeg" width="100">
+			</a>
 	    	<form action="#" class="searchform order-sm-start order-lg-last">
-          <div class="form-group d-flex">
-            <input type="text" class="form-control pl-3" placeholder="Search">
-            <button type="submit" placeholder="" class="form-control search"><span class="fa fa-search"></span></button>
-          </div>
-        </form>
+				<div class="form-group d-flex">
+					<input type="text" class="form-control pl-3" placeholder="Search">
+					<button type="submit" placeholder="" class="form-control search"><span class="fa fa-search"></span></button>
+				</div>
+			</form>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="fa fa-bars"></span> Menu
 	      </button>
@@ -249,48 +249,48 @@
 
     <section class="ftco-counter bg-light ftco-no-pt" id="section-counter">
     	<div class="container">
-				<div class="row">
-          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18 text-center">
-              <div class="text">
-                <strong class="number" data-number="50">0</strong>
-              </div>
-              <div class="text">
-              	<span>Années d'expérience</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18 text-center">
-              <div class="text">
-                <strong class="number" data-number="8500">0</strong>
-              </div>
-              <div class="text">
-              	<span>Cas terminés</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18 text-center">
-              <div class="text">
-                <strong class="number" data-number="20">0</strong>
-              </div>
-              <div class="text">
-              	<span>Prix gagnés</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18 text-center">
-              <div class="text">
-                <strong class="number" data-number="50">0</strong>
-              </div>
-              <div class="text">
-              	<span>Consultant expert</span>
-              </div>
-            </div>
-          </div>
-        </div>
+			<div class="row">
+				<div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18 text-center">
+					<div class="text">
+						<strong class="number" data-number="50">0</strong>
+					</div>
+					<div class="text">
+						<span>Années d'expérience</span>
+					</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18 text-center">
+					<div class="text">
+						<strong class="number" data-number="8500">0</strong>
+					</div>
+					<div class="text">
+						<span>Cas terminés</span>
+					</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18 text-center">
+					<div class="text">
+						<strong class="number" data-number="20">0</strong>
+					</div>
+					<div class="text">
+						<span>Prix gagnés</span>
+					</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18 text-center">
+					<div class="text">
+						<strong class="number" data-number="50">0</strong>
+					</div>
+					<div class="text">
+						<span>Consultant expert</span>
+					</div>
+					</div>
+				</div>
+			</div>
     	</div>
     </section>
 
@@ -502,7 +502,7 @@
 						<div><a href="{{ route('article', $p->slug) }}">{{ $p->editeur}}</a></div>
 						<div><a href="{{ route('article', $p->slug) }}" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
 						</div>
-						<h3 class="heading"><a href="#">{{ $p->titre}}</a></h3>
+						<h3 class="heading"><a href="{{ route('article', $p->slug) }}">{{ $p->titre}}</a></h3>
 					</div>
 					</div>
 				</div>
@@ -703,20 +703,20 @@
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
+  <script src="{{ asset('js/jquery.min.js') }}"></script>
+  <script src="{{ asset('js/jquery-migrate-3.0.1.min.js') }}"></script>
+  <script src="{{ asset('js/popper.min.js') }}"></script>
+  <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+  <script src="{{ asset('js/jquery.easing.1.3.js') }}"></script>
+  <script src="{{ asset('js/jquery.waypoints.min.js') }}"></script>
+  <script src="{{ asset('js/jquery.stellar.min.js') }}"></script>
+  <script src="{{ asset('js/jquery.animateNumber.min.js') }}"></script>
+  <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+  <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
+  <script src="{{ asset('js/scrollax.min.js') }}"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
+  <script src="{{ asset('js/google-map.js') }}"></script>
+  <script src="{{ asset('js/main.js') }}"></script>
     
   </body>
 </html>

@@ -9,14 +9,14 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
  
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
     
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
 
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ asset('css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 	<!-- Icon Image -->
     <link rel="shortcut icon" href="images/logo.jpeg">
   </head>
@@ -105,7 +105,7 @@
 
     <section class="ftco-section ftco-no-pt mt-4">
     	<div class="container">
-    		<div class="row" id="comptabilite">
+    		<div class="row ftco-animate" id="comptabilite">
     			<div class="col-md-6 col-lg-6">
     				<img src="images/image_4.jpg" class="img-fluid" style="border-radius: 130px 15px 15px 15px;">
     			</div>
@@ -127,7 +127,7 @@
 				</div>
         	</div>
 
-    		<div class="row mt-4">
+    		<div class="row mt-4 ftco-animate">
     			<div class="col-md-6 col-lg-6">
     				<img src="Img.p2a/5.png"  class="img-fluid" style="border-radius: 130px 15px 15px 15px;">
     			</div>
@@ -151,7 +151,7 @@
 				</div>
 			</div>
 
-        	<div class="row mt-4" id="fiscalite">
+        	<div class="row mt-4 ftco-animate" id="fiscalite">
     			<div class="col-md-6 col-lg-6">
     				<img src="Img.p2a/10.png"  class="img-fluid" style="border-radius: 130px 15px 15px 15px;">
     			</div>
@@ -174,7 +174,7 @@
 				</div>
 			</div>
 
-        	<div class="row mt-4" id="conseil">
+        	<div class="row mt-4 ftco-animate" id="conseil">
     			<div class="col-md-6 col-lg-6">
     				<img src="Img.p2a/2.png"  class="img-fluid" style="border-radius: 130px 15px 15px 15px;">
     			</div>
@@ -196,7 +196,7 @@
 				</div>
         	</div>
 
-        	<div class="row mt-4" id="assistance">
+        	<div class="row mt-4 ftco-animate" id="assistance">
     			<div class="col-md-6 col-lg-6">
     				<img src="Img.p2a/3.png"  class="img-fluid" style="border-radius: 130px 15px 15px 15px;">
     			</div>
@@ -218,7 +218,7 @@
 				</div>
 			</div>
 
-        	<div class="row mt-4">
+        	<div class="row mt-4 ftco-animate">
     			<div class="col-md-6 col-lg-6">
     				<img src="images/image_2.jpg"  class="img-fluid" style="border-radius: 130px 15px 15px 15px;">
     			</div>
@@ -240,7 +240,7 @@
 				</div>
 			</div>
 
-        	<div class="row mt-4">
+        	<div class="row mt-4 ftco-animate">
     			<div class="col-md-6 col-lg-6">
     				<img src="Img.p2a/4.png"  class="img-fluid" style="border-radius: 130px 15px 15px 15px;">
     			</div>
@@ -260,7 +260,7 @@
 				</div>
 			</div>
 
-			<div class="row mt-4">
+			<div class="row mt-4 ftco-animate">
 				<div class="col-md-10 col-lg-10 mx-auto">
 					<h3 class="text-success">Autres:</h3>
 					<p><strong>Nous proposons des formations spécialisées destinées à renforcer les compétences de vos équipes en gestion financière, comptabilité et pilotage d’entreprise.</strong></p>
@@ -584,20 +584,20 @@
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
+  <script src="{{ asset('js/jquery.min.js') }}"></script>
+  <script src="{{ asset('js/jquery-migrate-3.0.1.min.js') }}"></script>
+  <script src="{{ asset('js/popper.min.js') }}"></script>
+  <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+  <script src="{{ asset('js/jquery.easing.1.3.js') }}"></script>
+  <script src="{{ asset('js/jquery.waypoints.min.js') }}"></script>
+  <script src="{{ asset('js/jquery.stellar.min.js') }}"></script>
+  <script src="{{ asset('js/jquery.animateNumber.min.js') }}"></script>
+  <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+  <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
+  <script src="{{ asset('js/scrollax.min.js') }}"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
+  <script src="{{ asset('js/google-map.js') }}"></script>
+  <script src="{{ asset('js/main.js') }}"></script>
     
   </body>
 </html>

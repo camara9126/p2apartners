@@ -83,4 +83,4 @@ Route::get('cases', function () {
 Route::resource('contactForm', ContactFormController::class);
 
 // Route Vue Blog
-Route::get('/{slug}', [PostController::class, 'article'])->name('article');
+Route::get('articles/{slug}', [PostController::class, 'article'])->name('article');
