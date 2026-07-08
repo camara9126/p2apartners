@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\ContactForm;
+use App\Rules\Recaptcha;
 use Illuminate\Http\Request;
 
 class ContactFormController extends Controller
@@ -33,6 +34,7 @@ class ContactFormController extends Controller
             'email' => 'required',
             'sujet' => 'required',
             'message',
+            'g-recaptcha-response' => [new Recaptcha()]
         ]);
 
         ContactForm::create([

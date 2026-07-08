@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 	<!-- Icon Image -->
     <link rel="shortcut icon" href="images/logo.jpeg">
+	<!-- Google Recaptcha -->
+	 <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
   </head>
   <body>
 
@@ -138,6 +140,13 @@
 													<label class="label" for="#">Message</label>
 													<textarea name="message" class="form-control" cols="30" rows="4" placeholder="Message"></textarea>
 												</div>
+											</div>
+											<div class="col-md-12">
+												<label class="label" for="#">RECAPTCHA</label>
+												<div class="g-recaptcha" data-sitekey="{{ env('GOOGLE_RECAPTCHA_KEY') }}" data-action="LOGIN"></div>
+												@if($errors->has('g-recaptcha-response'))
+													<span class="text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
+												@endif
 											</div>
 											<div class="col-md-12">
 												<div class="form-group">
