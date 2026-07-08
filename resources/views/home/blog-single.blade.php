@@ -55,12 +55,12 @@
 	    	<a class="navbar-brand" href="/">
           <img src="images/logo.jpeg" width="100">
         </a>
-	    	<form action="#" class="searchform order-sm-start order-lg-last">
+	    	<!-- <form action="#" class="searchform order-sm-start order-lg-last">
           <div class="form-group d-flex">
             <input type="text" class="form-control pl-3" placeholder="Search">
             <button type="submit" placeholder="" class="form-control search"><span class="fa fa-search"></span></button>
           </div>
-        </form>
+        </form> -->
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="fa fa-bars"></span> Menu
 	      </button>
