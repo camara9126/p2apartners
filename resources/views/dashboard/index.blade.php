@@ -501,7 +501,7 @@
                                         <!--<a href="#" class="badge bg-warning"><i class="fas fa-edit" title="Modifier" onclick=""></i></a>
                                         <a href="#" class="badge bg-danger"><i class="fas fa-trash-alt" title="Supprimer" onclick=""></i></a>
                                         <a href="#" class="badge bg-info"><i class="fas fa-eye" title="Voir"></i></a>-->
-                                        <form action="{{ route('categorie.destroy', $p) }}" type="button" method="post" onsubmit="return confirm('Supprimer cette categorie ?')">
+                                        <form action="{{ route('categorie.destroy', $c) }}" type="button" method="post" onsubmit="return confirm('Supprimer cette categorie ?')">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="badge bg-danger">
