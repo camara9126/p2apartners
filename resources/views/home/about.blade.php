@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
   <head>
     <title>A propos P2A Partners</title>
     <meta charset="utf-8">

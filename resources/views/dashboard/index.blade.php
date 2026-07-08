@@ -445,7 +445,7 @@
 
                         <div style="grid-column: span 2;">
                             <label>Contenu (extrait / éditeur simple)</label>
-                            <textarea rows="4" name="contenu" placeholder="Rédiger un résumé ou le contenu principal..."></textarea>
+                            <textarea rows="5" colspan="30" name="contenu" id="editor" class="form-control" placeholder="Rédiger le contenu principal..."></textarea>
                         </div>     
                     </div>
                     <div style="display: flex; gap: 16px; margin-top: 24px;">
@@ -589,10 +589,7 @@
                 </table>
                 
             </div>
-        </div>
-
-              
-            
+        </div>       
          
         </div>
 
@@ -605,7 +602,7 @@
                         <th>Nom</th>
                         <th>Email</th>
                         <th>Sujet</th>
-                        <th>Message</th>
+                        <!-- <th>Message</th> -->
                         <th>Date</th>
                         <th style="width:100px">Actions</th>
                     </tr>
@@ -616,10 +613,10 @@
                                 <td>{{ $m->nom}}</td>
                                 <td>{{ $m->email}}</td>
                                 <td>{{ $m->sujet}}</td>
-                                <td>{{ $m->message ?? '-'}}</td>
+                                <!-- <td>{{ $m->message ?? '-'}}</td> -->
                                 <td>{{ $m->created_at}}</td>
                                 <td>
-                                    <a href="{{ route('contactForm.edit', $m) }}" class="badge bg-info"><i class="fas fa-eye" title="Voir"></i></a>
+                                    <a href="{{ route('contactForm.edit', $m) }}" class="badge bg-info"><i class="fas fa-eye" title="Afficher"></i></a>
                                     <form action="{{ route('contactForm.destroy', $m) }}" type="button" method="post" onsubmit="return confirm('Supprimer le message ?')">
                                         @csrf
                                         @method('DELETE')
@@ -638,8 +635,18 @@
         </div>
     </div>
 
-    
 
+    <!-- JS Editor -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+
+    
     <script>
 
     // Gestion des onglets

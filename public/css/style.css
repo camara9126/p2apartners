@@ -441,23 +441,23 @@ pre {
   overflow-y: scroll; }
 
 .container {
-  width: 100%;
+  width: 90%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto; }
   @media (min-width: 576px) {
     .container {
-      max-width: 540px; } }
+      max-width: 500px; } }
   @media (min-width: 768px) {
     .container {
-      max-width: 720px; } }
+      max-width: 700px; } }
   @media (min-width: 992px) {
     .container {
-      max-width: 960px; } }
+      max-width: 900px; } }
   @media (min-width: 1200px) {
     .container {
-      max-width: 1140px; } }
+      max-width: 1100px; } }
 
 .container-fluid {
   width: 100%;
@@ -3377,7 +3377,7 @@ input[type="button"].btn-block {
 
 .nav-link {
   display: block;
-  padding: 0.5rem 1rem; }
+  padding: 0.1rem 1rem; }
   .nav-link:hover, .nav-link:focus {
     text-decoration: none; }
   .nav-link.disabled {
@@ -3467,8 +3467,8 @@ input[type="button"].btn-block {
 
 .navbar-brand {
   display: inline-block;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
   margin-right: 1rem;
   font-size: 1.25rem;
   line-height: inherit;
@@ -3510,7 +3510,7 @@ input[type="button"].btn-block {
   align-items: center; }
 
 .navbar-toggler {
-  padding: 0.25rem 0.75rem;
+  padding: 0.5rem 0.75rem;
   font-size: 1.25rem;
   line-height: 1;
   background-color: transparent;
@@ -3524,7 +3524,7 @@ input[type="button"].btn-block {
 .navbar-toggler-icon {
   display: inline-block;
   width: 1.5em;
-  height: 1.5em;
+  height: 1.1em;
   vertical-align: middle;
   content: "";
   background: no-repeat center center;
