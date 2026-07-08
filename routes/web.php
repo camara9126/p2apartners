@@ -47,24 +47,24 @@ return view('home.construction');
 
 // Apropos 
 Route::get('about', function () {
-    return view('home.about');
+    return view('home.construction');
 });
 
 // Contact
 Route::get('contact', function () {
-    return view('home.contact');
+    return view('home.construction');
 });
 
 // Service
 Route::get('services', function () {
-    return view('home.services');
+    return view('home.construction');
 });
 
 // Blog
 Route::get('blog', function () {
     $posts= Post::with('categorie')->latest()->get();
 
-    return view('home.blog', compact('posts'));
+    return view('home.construction', compact('posts'));
 });
 
 // Blog
