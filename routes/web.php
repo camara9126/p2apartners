@@ -40,9 +40,9 @@ require __DIR__.'/auth.php';
 
 // Accueil
 Route::get('/', function () {
-    $posts= Post::with('categorie')->latest()->get();
-
-    return view('home.index', compact('posts'));
+    // $posts= Post::with('categorie')->latest()->get();
+return view('home.construction');
+    // return view('home.index', compact('posts'));
 })->name('accueil');
 
 // Apropos 
