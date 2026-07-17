@@ -157,7 +157,7 @@
 
     .progress-bar {
       height: 100%;
-      width: 58%;
+      width: 70%;
       background: linear-gradient(90deg, #f7d44a, #f5b342);
       border-radius: 40px;
       box-shadow: 0 0 12px #f7d44a80;
@@ -297,7 +297,7 @@
       <div class="progress-bar"></div>
     </div>
     <span style="font-size: 0.8rem; color: #f5f6f6; letter-spacing: 0.6px;">
-      <i class="far fa-clock"></i> Avancement estimé ~ 58%
+      <i class="far fa-clock"></i> Avancement estimé ~ 70%
     </span>
 
     <!-- infos supplémentaires -->

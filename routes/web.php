@@ -40,31 +40,32 @@ require __DIR__.'/auth.php';
 
 // Accueil
 Route::get('/', function () {
-    // $posts= Post::with('categorie')->latest()->get();
-return view('home.construction');
-    // return view('home.index', compact('posts'));
+    $posts= Post::with('categorie')->latest()->get();
+
+    return view('home.index', compact('posts'));
+    // return view('home.construction');
 })->name('accueil');
 
 // Apropos 
 Route::get('about', function () {
-    return view('home.construction');
+    return view('home.about');
 });
 
 // Contact
 Route::get('contact', function () {
-    return view('home.construction');
+    return view('home.contact');
 });
 
 // Service
 Route::get('services', function () {
-    return view('home.construction');
+    return view('home.services');
 });
 
 // Blog
 Route::get('blog', function () {
     $posts= Post::with('categorie')->latest()->get();
 
-    return view('home.construction', compact('posts'));
+    return view('home.blog', compact('posts'));
 });
 
 // Blog
