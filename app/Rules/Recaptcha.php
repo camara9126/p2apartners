@@ -21,6 +21,6 @@ class Recaptcha implements ValidationRule
             "response" => $value
         ])->json();
 
-        dd($response);
+        //dd($response);
     }
 }
