@@ -42,8 +42,8 @@ require __DIR__.'/auth.php';
 Route::get('/', function () {
     $posts= Post::with('categorie')->latest()->get();
 
-    return view('home.index', compact('posts'));
-    // return view('home.construction');
+    // return view('home.index', compact('posts'));
+    return view('home.construction');
 })->name('accueil');
 
 // Apropos 
