@@ -42,43 +42,142 @@ require __DIR__.'/auth.php';
 Route::get('/', function () {
     $posts= Post::with('categorie')->latest()->get();
 
-    // return view('home.index', compact('posts'));
-    return view('home.construction');
+    return view('p2A.index', compact('posts'));
 })->name('accueil');
 
 // Apropos 
-Route::get('about', function () {
-    return view('home.about');
+Route::get('apropos', function () {
+    return view('p2A.apropos');
 });
 
 // Contact
 Route::get('contact', function () {
-    return view('home.contact');
+    return view('p2A.contact');
 });
 
 // Service
-Route::get('services', function () {
-    return view('home.services');
+Route::get('serviceaccompagnement', function () {
+    return view('p2A.serviceaccompagnement');
 });
 
 // Blog
 Route::get('blog', function () {
     $posts= Post::with('categorie')->latest()->get();
 
-    return view('home.blog', compact('posts'));
+    return view('p2A.blog', compact('posts'));
 });
 
-// Blog
-Route::get('blog-single', function () {
-    $posts= Post::with('categorie')->latest()->get();
-
-    return view('home.blog-single', compact('posts'));
-});
 
 // Case
 Route::get('cases', function () {
-    return view('home.cases');
+    return view('p2A.cases');
 });
+
+// Carrières
+Route::get('carrières', function () {
+    return view('p2A.carrières');
+});
+
+// Transport et logistique
+Route::get('transportetlogistique', function () {
+    return view('p2A.transportetlogistique');
+});     
+
+// actualités
+ Route::get('actualites', function () {
+    return view('p2A.actualites');
+});
+
+// audio et vidéo
+Route::get('audit', function () {
+    return view('p2A.audit');
+});
+
+// qui nous sommes
+Route::get('quinoussomme', function () {
+    return view('p2A.apropos');
+});
+
+// assistance juridique
+Route::get('assistancejuridique', function () {
+    return view('p2A.assistancejuridique');
+});
+
+// automobile
+Route::get('automobile', function () {
+    return view('p2A.automobile');
+});
+
+// conseil et orgnisation
+Route::get('conseiletorganisation', function () {
+    return view('p2A.conseiletorganisation');
+});
+
+// conseil financier
+Route::get('conseilfinancier', function () {
+    return view('p2A.conseilfinancier');
+});
+
+// expertise comptable
+Route::get('expertisecomptable', function () {
+    return view('p2A.expertisecomptable');
+});
+
+// fiscalité
+Route::get('fiscalité', function () {
+    return view('p2A.fiscalité');
+});
+
+// ifrs
+Route::get('ifrs', function () {
+    return view('p2A.ifrs');
+});
+
+// industrie et mines
+Route::get('industriesetmines', function () {
+    return view('p2A.industriesetmines');
+});
+
+// insight fiscalite
+Route::get('insightfiscalite', function () {
+    return view('p2A.insightfiscalité');
+});
+
+// insights
+Route::get('insights', function () {
+    return view('p2A.insights');
+}); 
+
+// ong et secteur
+Route::get('ongetsecteur', function () {
+    return view('p2A.ongetsecteur');
+});
+
+// paie et social
+Route::get('paieetsocial', function () {
+    return view('p2A.paieetsocial');
+});
+
+// services financiers
+Route::get('servicesfinanciers', function () {
+    return view('p2A.servicesfinanciers');
+});
+
+// syscohoda
+Route::get('syscohoda', function () {
+    return view('p2A.syscohoda');
+}); 
+
+// telecommunication
+Route::get('telecometmultimedia', function () {
+    return view('p2A.telecometmultimedia');
+});
+
+// transport et logistique
+Route::get('transportetlogistique', function () {
+    return view('p2A.transportetlogistique');
+});
+
 
 // Route ContactForm
 Route::resource('contactForm', ContactFormController::class);

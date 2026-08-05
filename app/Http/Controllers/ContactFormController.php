@@ -33,7 +33,9 @@ class ContactFormController extends Controller
             'nom' => 'required',
             'email' => 'required',
             'sujet' => 'required',
-            'message',
+            'message' => 'required',
+            'company' => 'nullable',
+            'phone' => 'nullable',
             'g-recaptcha-response' => [new Recaptcha()]
         ]);
 
@@ -41,7 +43,9 @@ class ContactFormController extends Controller
             'nom' => $request->nom,
             'email' => $request->email,
             'sujet' => $request->sujet,
-            'message' => $request->message
+            'message' => $request->message,
+            'company' => $request->company,
+            'phone' => $request->phone
         ]);
 
         return redirect()->back()->with('success', 'Votre message a bien été envoyé, merci !');
