@@ -6,6 +6,10 @@
     <title>P2A Partners - Contact</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Icon Image -->
+    <link rel="shortcut icon" href="images/logo.jpeg">
+	<!-- Google Recaptcha -->
+	 <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
     <style>
         .group:hover .dropdown-menu {
             opacity: 1;
