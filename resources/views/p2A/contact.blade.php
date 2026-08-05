@@ -173,7 +173,7 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-xs font-semibold text-gray-700 uppercase mb-2">Nom complet</label>
-                            <input type="text" name="name" required class="w-full bg-white border border-gray-300 rounded px-4 py-3 text-sm focus:outline-none focus:border-blue-600">
+                            <input type="text" name="nom" required class="w-full bg-white border border-gray-300 rounded px-4 py-3 text-sm focus:outline-none focus:border-blue-600">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-gray-700 uppercase mb-2">Entreprise</label>
