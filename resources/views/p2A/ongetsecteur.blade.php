@@ -11,12 +11,53 @@
             visibility: visible;
             transform: translateY(0);
         }
+
+        /* Styles pour le menu mobile */
+        .mobile-menu {
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .mobile-submenu {
+            border-left: 2px solid #0b131d;
+            margin-left: 8px;
+        }
+
+        .mobile-submenu a {
+            padding-left: 20px;
+        }
+
+        /* Animation du hamburger */
+        button span {
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Amélioration du scroll sur mobile */
+        .mobile-menu::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .mobile-menu::-webkit-scrollbar-thumb {
+            background: #0b131d; 
+            border-radius: 2px;
+        }
+
+        /* Overlay optionnel */
+        .mobile-menu {
+            position: absolute;
+            top: 10%;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
     </style>
 </head>
 <body class="bg-white text-gray-900 font-sans">
 
     <!-- HEADER / NAVIGATION -->
-    <header class="flex items-center justify-between px-6 lg:px-12 py-5 border-b border-gray-800 bg-[#0b131d] text-white">
+    <header class="flex items-center justify-between px-6 lg:px-12 py-5 border-b border-gray-800 bg-[#ffff] text-[#0b131d]">
         <!-- Logo -->
         <div class="flex items-center space-x-2">
             <a href="/" class="flex items-center space-x-2">
@@ -29,63 +70,9 @@
         </div>
 
         <!-- NAVIGATION PRINCIPALE AVEC MENUS DEROULANTS -->
-        <nav class="hidden lg:flex items-center space-x-8 text-sm text-gray-300">
-            
-            <!-- Dropdown 1 : Qui nous accompagnons -->
-            <div class="relative group py-2">
-                <a href="/" class="hover:text-white flex items-center focus:outline-none py-1">
-                    Qui nous accompagnons 
-                    <svg class="w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </a>
-                <div class="dropdown-menu absolute top-full left-0 w-64 bg-[#0b131d] text-white shadow-2xl opacity-0 invisible transform -translate-y-2 transition-all duration-200 py-2 border border-gray-800 z-50">
-                    <a href="servicesfinanciers" class="block px-5 py-2.5 text-xs hover:bg-gray-800 transition-colors">Services financiers</a>
-                    <a href="industriesetmines" class="block px-5 py-2.5 text-xs hover:bg-gray-800 transition-colors">Industries & mines</a>
-                    <a href="automobile" class="block px-5 py-2.5 text-xs hover:bg-gray-800 transition-colors">Automobile</a>
-                    <a href="telecometmultimedia" class="block px-5 py-2.5 text-xs hover:bg-gray-800 transition-colors">Télécom & multimédia</a>
-                    <a href="transportetlogistique" class="block px-5 py-2.5 text-xs hover:bg-gray-800 transition-colors">Transport & logistique</a>
-                    <a href="serviceaccompagnement" class="block px-5 py-2.5 text-xs hover:bg-gray-800 transition-colors">Services</a>
-                    <a href="ongetsecteur" class="block px-5 py-2.5 text-xs hover:bg-gray-800 transition-colors">ONG & secteur public</a>
-                </div>
-            </div>
+        @include('partials.navbar')
 
-            <!-- Dropdown 2 : Ce que nous faisons -->
-            <div class="relative group py-2">
-                <a href="service" class="hover:text-white flex items-center focus:outline-none py-1">
-                    Ce que nous faisons 
-                    <svg class="w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </a>
-                <div class="dropdown-menu absolute top-full left-0 w-72 bg-[#0b131d] text-white shadow-2xl opacity-0 invisible transform -translate-y-2 transition-all duration-200 py-2 border border-gray-800 z-50">
-                    <a href="expertisecomptable" class="block px-5 py-2.5 text-xs hover:bg-gray-800 transition-colors">Expertise comptable</a>
-                    <a href="audit" class="block px-5 py-2.5 text-xs hover:bg-gray-800 transition-colors">Audit & commissariat aux comptes</a>
-                    <a href="fiscalité" class="block px-5 py-2.5 text-xs hover:bg-gray-800 transition-colors">Fiscalité & conformité</a>
-                    <a href="conseiletorganisation" class="block px-5 py-2.5 text-xs hover:bg-gray-800 transition-colors">Conseil & organisation</a>
-                    <a href="paieetsocial" class="block px-5 py-2.5 text-xs hover:bg-gray-800 transition-colors">Paie & social</a>
-                    <a href="conseilfinancier" class="block px-5 py-2.5 text-xs hover:bg-gray-800 transition-colors">Conseil Financier</a>
-                    <a href="assistancejuridique" class="block px-5 py-2.5 text-xs hover:bg-gray-800 transition-colors">Assistance Juridique</a>
-                </div>
-            </div>
-
-            <!-- Dropdown 3 : Qui nous sommes -->
-            <div class="relative group py-2">
-                <a href="quinoussomme" class="hover:text-white flex items-center focus:outline-none py-1">
-                    Qui nous sommes 
-                    <svg class="w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </a>
-                <div class="dropdown-menu absolute top-full left-0 w-56 bg-[#0b131d] text-white shadow-2xl opacity-0 invisible transform -translate-y-2 transition-all duration-200 py-2 border border-gray-800 z-50">
-                    <a href="quinoussomme" class="block px-5 py-2.5 text-xs hover:bg-gray-800 transition-colors">Qui nous sommes</a>
-                    <a href="carrières" class="block px-5 py-2.5 text-xs hover:bg-gray-800 transition-colors">Carrières</a>
-                </div>
-            </div>
-
-            <a href="insights" class="hover:text-white">Insights</a>
-            <a href="actualites" class="hover:text-white">Actualités</a>
-            <a href="contact" class="hover:text-white">Contact</a>
-        </nav>
-
-        <!-- Langue -->
-        <div class="text-xs font-semibold tracking-wider text-gray-300">
-            FR | EN
-        </div>
+       
     </header>
 
     <!-- HERO SECTION ONG & SECTEUR PUBLIC -->
@@ -192,5 +179,148 @@
         </div>
     </footer>
 
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Créer le bouton hamburger pour mobile
+            const nav = document.querySelector('nav');
+            const navContainer = nav.parentElement;
+            
+            // Créer le bouton hamburger
+            const hamburgerBtn = document.createElement('button');
+            hamburgerBtn.className = 'lg:hidden flex flex-col items-center text-[#0b131d] justify-center w-10 h-10 space-y-1.5 focus:outline-none';
+            hamburgerBtn.setAttribute('aria-label', 'Menu');
+            hamburgerBtn.innerHTML = `
+                <span class="block w-6 h-0.5 bg-[#0b131d] transition-all duration-300"></span>
+                <span class="block w-6 h-0.5 bg-[#0b131d] transition-all duration-300"></span>
+                <span class="block w-6 h-0.5 bg-[#0b131d] transition-all duration-300"></span>
+            `;
+            
+            // Insérer le bouton avant la navigation
+            navContainer.insertBefore(hamburgerBtn, nav);
+            
+            // Créer le menu mobile
+            const mobileMenu = document.createElement('div');
+            mobileMenu.className = 'mobile-menu lg:hidden hidden w-full mt-1 bg-[#ffff] text-[#0b131d] border-t border-gray-800';
+            mobileMenu.innerHTML = `
+                <div class="container mx-auto px-4 py-1 space-y-2">
+                    <!-- Dropdown 1 : Qui nous accompagnons -->
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-toggle w-full text-left text-sm hover: text-[#0b131d] py-2 flex items-center justify-between focus:outline-none">
+                            <span>Qui nous accompagnons</span>
+                            <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="mobile-submenu hidden pl-4 space-y-1">
+                            <a href="servicesfinanciers" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Services financiers</a>
+                            <a href="industriesetmines" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Industries & mines</a>
+                            <a href="automobile" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Automobile</a>
+                            <a href="telecometmultimedia" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Télécom & multimédia</a>
+                            <a href="transportetlogistique" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Transport & logistique</a>
+                            <a href="serviceaccompagnement" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Services</a>
+                            <a href="ongetsecteur" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">ONG & secteur public</a>
+                        </div>
+                    </div>
+
+                    <!-- Dropdown 2 : Ce que nous faisons -->
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-toggle w-full text-left text-sm hover: bg-[#ffff] text-[#0b131d] py-2 flex items-center justify-between focus:outline-none">
+                            <span>Ce que nous faisons</span>
+                            <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="mobile-submenu hidden pl-4 space-y-1">
+                            <a href="expertisecomptable" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Expertise comptable</a>
+                            <a href="audit" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Audit & commissariat aux comptes</a>
+                            <a href="fiscalité" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Fiscalité & conformité</a>
+                            <a href="conseiletorganisation" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Conseil & organisation</a>
+                            <a href="paieetsocial" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Paie & social</a>
+                            <a href="conseilfinancier" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Conseil Financier</a>
+                            <a href="assistancejuridique" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Assistance Juridique</a>
+                        </div>
+                    </div>
+
+                    <!-- Dropdown 3 : Qui nous sommes -->
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-toggle w-full text-left text-sm hover: bg-[#ffff] text-[#0b131d] py-2 flex items-center justify-between focus:outline-none">
+                            <span>Qui nous sommes</span>
+                            <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="mobile-submenu hidden pl-4 space-y-1">
+                            <a href="apropos" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Qui nous sommes</a>
+                            <a href="carrières" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Carrières</a>
+                        </div>
+                    </div>
+
+                    <!-- Liens simples -->
+                    <a href="insights" class="block text-sm bg-[#ffff] text-[#0b131d] hover:text-white py-2">Insights</a>
+                    <a href="actualites" class="block text-sm bg-[#ffff] text-[#0b131d] hover:text-white py-2">Actualités</a>
+                    <a href="contact" class="block text-sm bg-[#ffff] text-[#0b131d] hover:text-white py-2">Contact</a>
+                </div>
+            `;
+            
+            // Insérer le menu mobile après la navigation
+            navContainer.appendChild(mobileMenu);
+            
+            // Gérer l'ouverture/fermeture du menu mobile
+            hamburgerBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                
+                // Animation du hamburger
+                const spans = this.querySelectorAll('span');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                    spans[1].style.opacity = '0';
+                    spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+                } else {
+                    spans[0].style.transform = 'rotate(0) translate(0, 0)';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'rotate(0) translate(0, 0)';
+                }
+            });
+        
+            // Gérer l'ouverture/fermeture des sous-menus
+            const dropdownToggles = mobileMenu.querySelectorAll('.mobile-dropdown-toggle');
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const submenu = this.nextElementSibling;
+                    const icon = this.querySelector('svg');
+                    
+                    // Fermer tous les autres sous-menus
+                    const allSubmenus = mobileMenu.querySelectorAll('.mobile-submenu');
+                    allSubmenus.forEach(menu => {
+                        if (menu !== submenu) {
+                            menu.classList.add('hidden');
+                            const parentIcon = menu.previousElementSibling.querySelector('svg');
+                            if (parentIcon) {
+                                parentIcon.style.transform = 'rotate(0)';
+                            }
+                        }
+                    });
+                    
+                    // Ouvrir/fermer le sous-menu cliqué
+                    submenu.classList.toggle('hidden');
+                    icon.style.transform = submenu.classList.contains('hidden') ? 'rotate(0)' : 'rotate(180deg)';
+                });
+            });
+        
+                // Fermer le menu mobile lors du clic sur un lien
+                const mobileLinks = mobileMenu.querySelectorAll('a');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                        // Réinitialiser le hamburger
+                        const spans = hamburgerBtn.querySelectorAll('span');
+                        spans[0].style.transform = 'rotate(0) translate(0, 0)';
+                        spans[1].style.opacity = '1';
+                        spans[2].style.transform = 'rotate(0) translate(0, 0)';
+                    });
+                });
+        });
+    </script>
 </body>
 </html>

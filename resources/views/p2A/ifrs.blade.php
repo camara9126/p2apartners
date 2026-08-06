@@ -386,12 +386,53 @@
                 padding: 1.5rem;
             }
         }
+
+        /* Styles pour le menu mobile */
+        .mobile-menu {
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .mobile-submenu {
+            border-left: 2px solid #0b131d;
+            margin-left: 8px;
+        }
+
+        .mobile-submenu a {
+            padding-left: 20px;
+        }
+
+        /* Animation du hamburger */
+        button span {
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Amélioration du scroll sur mobile */
+        .mobile-menu::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .mobile-menu::-webkit-scrollbar-thumb {
+            background: #0b131d; 
+            border-radius: 2px;
+        }
+
+        /* Overlay optionnel */
+        .mobile-menu {
+            position: absolute;
+            top: 10%;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
     </style>
 </head>
 <body>
 
     <!-- En-tête / Navbar avec les menus déroulants -->
-    <header>
+    <header class="flex items-center justify-between px-6 lg:px-12 py-5 border-b border-gray-800 bg-[#ffff] text-[#0b131d]">
         <div class="nav-container">
             <!-- Logo à gauche -->
             <a href="/" class="logo-area">
@@ -404,60 +445,9 @@
             </a>
 
             <!-- Liens de navigation centrés avec menus déroulants -->
-            <ul class="nav-links">
-                <!-- Dropdown 1 : Qui nous accompagnons -->
-                <li class="dropdown">
-                    <a href="clients" aria-haspopup="true" aria-expanded="false">
-                        Qui nous accompagnons <span class="arrow-down">▼</span>
-                    </a>
-                    <ul class="dropdown-content">
-                        <li><a href="servicesfinanciers">Services financiers</a></li>
-                        <li><a href="industriesetmines">Industries & mines</a></li>
-                        <li><a href="automobile">Automobile</a></li>
-                        <li><a href="telecometmultimedia">Télécom & multimédia</a></li>
-                        <li><a href="transportetlogistique">Transport & logistique</a></li>
-                        <li><a href="serviceaccompagnement">Services</a></li>
-                        <li><a href="ongetsecteur">ONG & secteur public</a></li>
-                    </ul>
-                </li>
-                
-                <!-- Dropdown 2 : Ce que nous faisons -->
-                <li class="dropdown" id="servicesDropdown">
-                    <a href="services" aria-haspopup="true" aria-expanded="false">
-                        Ce que nous faisons <span class="arrow-down">▼</span>
-                    </a>
-                    <ul class="dropdown-content">
-                        <li><a href="expertisecomptable">Expertise comptable</a></li>
-                        <li><a href="audit">Audit & commissariat aux comptes</a></li>
-                        <li><a href="fiscalité">Fiscalité & conformité</a></li>
-                        <li><a href="conseiletorganisation">Conseil & organisation</a></li>
-                        <li><a href="paieetsocial">Paie & social</a></li>
-                        <li><a href="conseilfinancier">Conseil Financier</a></li>
-                        <li><a href="assistancejuridique">Assistance Juridique</a></li>
-                    </ul>
-                </li>
+            @include('partials.navbar')
 
-                <!-- Dropdown 3 : Qui nous sommes -->
-                <li class="dropdown">
-                    <a href="apropos" aria-haspopup="true" aria-expanded="false">
-                        Qui nous sommes <span class="arrow-down">▼</span>
-                    </a>
-                    <ul class="dropdown-content">
-                        <li><a href="apropos">Qui nous sommes</a></li>
-                        <li><a href="carrières">Carrières</a></li>
-                    </ul>
-                </li>
-
-                <!-- Liens directs -->
-                <li><a href="insights">Insights</a></li>
-                <li><a href="actualites">Actualités</a></li>
-                <li><a href="contact">Contact</a></li>
-            </ul>
-
-            <!-- Sélecteur de langue à droite -->
-            <div class="lang-area">
-                <a href="#" class="lang-switch">FR | EN</a>
-            </div>
+          
         </div>
     </header>
 
@@ -659,6 +649,149 @@
                     });
                 }
             });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Créer le bouton hamburger pour mobile
+            const nav = document.querySelector('nav');
+            const navContainer = nav.parentElement;
+            
+            // Créer le bouton hamburger
+            const hamburgerBtn = document.createElement('button');
+            hamburgerBtn.className = 'lg:hidden flex flex-col items-center text-[#0b131d] justify-center w-10 h-10 space-y-1.5 focus:outline-none';
+            hamburgerBtn.setAttribute('aria-label', 'Menu');
+            hamburgerBtn.innerHTML = `
+                <span class="block w-6 h-0.5 bg-[#0b131d] transition-all duration-300"></span>
+                <span class="block w-6 h-0.5 bg-[#0b131d] transition-all duration-300"></span>
+                <span class="block w-6 h-0.5 bg-[#0b131d] transition-all duration-300"></span>
+            `;
+            
+            // Insérer le bouton avant la navigation
+            navContainer.insertBefore(hamburgerBtn, nav);
+            
+            // Créer le menu mobile
+            const mobileMenu = document.createElement('div');
+            mobileMenu.className = 'mobile-menu lg:hidden hidden w-full mt-1 bg-[#ffff] text-[#0b131d] border-t border-gray-800';
+            mobileMenu.innerHTML = `
+                <div class="container mx-auto px-4 py-1 space-y-2">
+                    <!-- Dropdown 1 : Qui nous accompagnons -->
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-toggle w-full text-left text-sm hover: text-[#0b131d] py-2 flex items-center justify-between focus:outline-none">
+                            <span>Qui nous accompagnons</span>
+                            <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="mobile-submenu hidden pl-4 space-y-1">
+                            <a href="servicesfinanciers" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Services financiers</a>
+                            <a href="industriesetmines" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Industries & mines</a>
+                            <a href="automobile" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Automobile</a>
+                            <a href="telecometmultimedia" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Télécom & multimédia</a>
+                            <a href="transportetlogistique" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Transport & logistique</a>
+                            <a href="serviceaccompagnement" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Services</a>
+                            <a href="ongetsecteur" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">ONG & secteur public</a>
+                        </div>
+                    </div>
+
+                    <!-- Dropdown 2 : Ce que nous faisons -->
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-toggle w-full text-left text-sm hover: bg-[#ffff] text-[#0b131d] py-2 flex items-center justify-between focus:outline-none">
+                            <span>Ce que nous faisons</span>
+                            <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="mobile-submenu hidden pl-4 space-y-1">
+                            <a href="expertisecomptable" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Expertise comptable</a>
+                            <a href="audit" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Audit & commissariat aux comptes</a>
+                            <a href="fiscalité" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Fiscalité & conformité</a>
+                            <a href="conseiletorganisation" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Conseil & organisation</a>
+                            <a href="paieetsocial" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Paie & social</a>
+                            <a href="conseilfinancier" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Conseil Financier</a>
+                            <a href="assistancejuridique" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Assistance Juridique</a>
+                        </div>
+                    </div>
+
+                    <!-- Dropdown 3 : Qui nous sommes -->
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-toggle w-full text-left text-sm hover: bg-[#ffff] text-[#0b131d] py-2 flex items-center justify-between focus:outline-none">
+                            <span>Qui nous sommes</span>
+                            <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="mobile-submenu hidden pl-4 space-y-1">
+                            <a href="apropos" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Qui nous sommes</a>
+                            <a href="carrières" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Carrières</a>
+                        </div>
+                    </div>
+
+                    <!-- Liens simples -->
+                    <a href="insights" class="block text-sm bg-[#ffff] text-[#0b131d] hover:text-white py-2">Insights</a>
+                    <a href="actualites" class="block text-sm bg-[#ffff] text-[#0b131d] hover:text-white py-2">Actualités</a>
+                    <a href="contact" class="block text-sm bg-[#ffff] text-[#0b131d] hover:text-white py-2">Contact</a>
+                </div>
+            `;
+            
+            // Insérer le menu mobile après la navigation
+            navContainer.appendChild(mobileMenu);
+            
+            // Gérer l'ouverture/fermeture du menu mobile
+            hamburgerBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                
+                // Animation du hamburger
+                const spans = this.querySelectorAll('span');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                    spans[1].style.opacity = '0';
+                    spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+                } else {
+                    spans[0].style.transform = 'rotate(0) translate(0, 0)';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'rotate(0) translate(0, 0)';
+                }
+            });
+        
+            // Gérer l'ouverture/fermeture des sous-menus
+            const dropdownToggles = mobileMenu.querySelectorAll('.mobile-dropdown-toggle');
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const submenu = this.nextElementSibling;
+                    const icon = this.querySelector('svg');
+                    
+                    // Fermer tous les autres sous-menus
+                    const allSubmenus = mobileMenu.querySelectorAll('.mobile-submenu');
+                    allSubmenus.forEach(menu => {
+                        if (menu !== submenu) {
+                            menu.classList.add('hidden');
+                            const parentIcon = menu.previousElementSibling.querySelector('svg');
+                            if (parentIcon) {
+                                parentIcon.style.transform = 'rotate(0)';
+                            }
+                        }
+                    });
+                    
+                    // Ouvrir/fermer le sous-menu cliqué
+                    submenu.classList.toggle('hidden');
+                    icon.style.transform = submenu.classList.contains('hidden') ? 'rotate(0)' : 'rotate(180deg)';
+                });
+            });
+        
+                // Fermer le menu mobile lors du clic sur un lien
+                const mobileLinks = mobileMenu.querySelectorAll('a');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                        // Réinitialiser le hamburger
+                        const spans = hamburgerBtn.querySelectorAll('span');
+                        spans[0].style.transform = 'rotate(0) translate(0, 0)';
+                        spans[1].style.opacity = '1';
+                        spans[2].style.transform = 'rotate(0) translate(0, 0)';
+                    });
+                });
         });
     </script>
 </body>

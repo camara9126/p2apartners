@@ -85,7 +85,8 @@ Route::get('transportetlogistique', function () {
 
 // actualités
  Route::get('actualites', function () {
-    return view('p2A.actualites');
+    $posts = Post::with('categorie')->latest()->get();
+    return view('p2A.actualites', compact('posts'));
 });
 
 // audio et vidéo
