@@ -42,7 +42,7 @@ require __DIR__.'/auth.php';
 Route::get('/', function () {
     $posts= Post::with('categorie')->latest()->get();
 
-    return view('p2A.index', compact('posts'));
+    return view('p2A.home', compact('posts'));
 })->name('accueil');
 
 // Apropos 

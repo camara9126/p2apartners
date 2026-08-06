@@ -61,10 +61,11 @@
         <!-- Logo -->
         <div class="flex items-center space-x-2">
             <a href="/" class="flex items-center space-x-2">
-                <div class="text-center">
+                <img src="images/logo.jpeg" width="70">
+                <!-- <div class="text-center">
                     <span class="block font-bold tracking-widest text-lg">P2A</span>
                     <span class="block text-[10px] tracking-wider text-gray-400">PARTNERS</span>
-                </div>
+                </div> -->
             </a>
         </div>
 

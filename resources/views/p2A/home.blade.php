@@ -92,6 +92,7 @@
         .nav-links {
             display: flex;
             gap: 2rem;
+            color: #0b131d;
             list-style: none;
             align-items: center;
             margin: 0 auto;
@@ -573,14 +574,14 @@
             border-bottom: 1px solid var(--border-color);
         }
 
-        .newsletter-container {
-            max-width: 1300px;
+        /* .newsletter-container {
+            max-width: 950px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 5rem;
             align-items: center;
-        }
+        } */
 
         .newsletter-content h2 {
             font-size: 2.4rem;
@@ -744,6 +745,230 @@
                 justify-content: center;
             }
         }
+
+/* Styles pour le bouton hamburger */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1000;
+}
+
+.hamburger-menu .bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    transition: all 0.3s ease-in-out;
+    border-radius: 2px;
+}
+
+/* Animation du hamburger en X */
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+    background-color: #ffffff;
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+    background-color: #ffffff;
+}
+
+/* Styles pour le menu mobile - FOND NOIR VISIBLE */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 85%;
+    max-width: 400px;
+    height: 100vh;
+    background-color: #000000 !important;
+    padding: 80px 25px 30px;
+    overflow-y: auto;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.8);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav:not(.hidden) {
+    right: 0;
+}
+
+/* Overlay quand le menu est ouvert */
+body.menu-open::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 998;
+    backdrop-filter: blur(4px);
+}
+
+/* Styles des items du menu mobile */
+.mobile-nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.mobile-nav li {
+    list-style: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mobile-nav > li:last-child {
+    border-bottom: none;
+}
+
+.mobile-nav a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #0b131d !important;
+    text-decoration: none;
+    padding: 15px 0;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.mobile-nav a:hover {
+    color: #ffffff !important;
+    padding-left: 5px;
+}
+
+/* Flèches dans le menu mobile */
+.mobile-nav .arrow-down {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    color: #0b131d;
+    margin-left: 10px;
+}
+
+/* Contenu des dropdowns en mobile */
+.mobile-nav .dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding-left: 20px;
+    transition: all 0.3s ease-in-out;
+    margin-top: 0;
+    background-color: transparent;
+}
+
+.mobile-nav .mobile-dropdown.active .dropdown-content {
+    max-height: 600px;
+    opacity: 1;
+    margin-top: 5px;
+}
+
+.mobile-nav .dropdown-content li {
+    border-bottom: none;
+    background-color: transparent;
+}
+
+.mobile-nav .dropdown-content a {
+    padding: 12px 0;
+    font-size: 14px;
+    color: #0b131d !important;
+    padding-left: 15px;
+    border-left: 3px solid transparent;
+    font-weight: 400;
+}
+
+.mobile-nav .dropdown-content a:hover {
+    color: #ffffff !important;
+    border-left-color: #3b82f6;
+    padding-left: 20px;
+}
+
+/* Style des liens simples */
+.mobile-nav li:not(.mobile-dropdown) a {
+    color: #e5e7eb !important;
+    font-weight: 500;
+}
+
+.mobile-nav li:not(.mobile-dropdown) a:hover {
+    color: #ffffff !important;
+    padding-left: 5px;
+}
+
+/* Responsive */
+@media (max-width: 1023px) {
+    .hamburger-menu {
+        display: flex;
+    }
+    
+    .nav-links:not(.mobile-nav) {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .mobile-nav {
+        display: none !important;
+    }
+    
+    .hamburger-menu {
+        display: none !important;
+    }
+}
+
+/* Style du scroll pour mobile */
+.mobile-nav::-webkit-scrollbar {
+    width: 4px;
+}
+
+.mobile-nav::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.mobile-nav::-webkit-scrollbar-thumb {
+    background: #0b131d;
+    border-radius: 4px;
+}
+
+/* Animation d'entrée des items */
+.mobile-nav li {
+    opacity: 0;
+    transform: translateX(20px);
+    animation: slideIn 0.3s ease forwards;
+}
+
+.mobile-nav li:nth-child(1) { animation-delay: 0.05s; }
+.mobile-nav li:nth-child(2) { animation-delay: 0.1s; }
+.mobile-nav li:nth-child(3) { animation-delay: 0.15s; }
+.mobile-nav li:nth-child(4) { animation-delay: 0.2s; }
+.mobile-nav li:nth-child(5) { animation-delay: 0.25s; }
+.mobile-nav li:nth-child(6) { animation-delay: 0.3s; }
+.mobile-nav li:nth-child(7) { animation-delay: 0.35s; }
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Supprimer l'animation quand le menu est caché */
+.mobile-nav.hidden li {
+    animation: none;
+    opacity: 0;
     </style>
 </head>
 <body>
@@ -990,7 +1215,9 @@ les points clés à préparer avant 2027.</p>
                     <label for="email">Votre adresse email professionnelle</label>
                     <div class="form-row">
                         <input type="email" id="email" placeholder="nom@entreprise.com">
-                        <a href="#" class="btn-primary" style="display: flex; align-items: center; justify-content: center; border-radius: 6px;">S'inscrire</a>
+                        </div>
+                        <div class="form-row">
+                        <a href="#" class="btn btn-primary" style="border-radius: 6px;">S'inscrire</a>
                     </div>
                 </div>
             </div>
@@ -1041,33 +1268,145 @@ Sénégal<br>contact@p2apartners.com</p>
 
     <!-- Script JavaScript pour la gestion des menus déroulants sur mobile et desktop -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const dropdowns = document.querySelectorAll('.dropdown');
-
-            dropdowns.forEach(dropdown => {
-                const link = dropdown.querySelector('a');
-
-                link.addEventListener('click', function (e) {
-                    if (window.innerWidth <= 960) {
-                        e.preventDefault();
-                        dropdown.classList.toggle('active');
-
-                        const expanded = dropdown.classList.contains('active');
-                        link.setAttribute('aria-expanded', expanded);
+document.addEventListener('DOMContentLoaded', function() {
+    // Sélectionner la navigation
+    const nav = document.querySelector('.nav-links');
+    const navContainer = nav.parentElement;
+    
+    // Créer le bouton hamburger pour mobile
+    const hamburgerBtn = document.createElement('button');
+    hamburgerBtn.className = 'hamburger-menu lg:hidden';
+    hamburgerBtn.setAttribute('aria-label', 'Menu');
+    hamburgerBtn.innerHTML = `
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    `;
+    
+    // Insérer le bouton avant la navigation
+    navContainer.insertBefore(hamburgerBtn, nav);
+    
+    // Cloner la navigation pour le mobile
+    const mobileNav = nav.cloneNode(true);
+    mobileNav.className = 'nav-links mobile-nav hidden';
+    mobileNav.id = 'mobile-nav';
+    
+    // Insérer la navigation mobile après la navigation originale
+    navContainer.appendChild(mobileNav);
+    
+    // Gérer l'ouverture/fermeture du menu mobile
+    hamburgerBtn.addEventListener('click', function() {
+        this.classList.toggle('active');
+        mobileNav.classList.toggle('hidden');
+        document.body.classList.toggle('menu-open');
+    });
+    
+    // Gérer les dropdowns en mobile (accordéon)
+    const mobileDropdowns = mobileNav.querySelectorAll('.dropdown');
+    mobileDropdowns.forEach(dropdown => {
+        const link = dropdown.querySelector('a');
+        const content = dropdown.querySelector('.dropdown-content');
+        const arrow = link.querySelector('.arrow-down');
+        
+        // Supprimer le comportement de hover
+        dropdown.classList.remove('dropdown');
+        dropdown.classList.add('mobile-dropdown');
+        
+        // Ajouter un écouteur pour le clic
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Fermer tous les autres dropdowns
+            const allDropdowns = mobileNav.querySelectorAll('.mobile-dropdown');
+            allDropdowns.forEach(d => {
+                if (d !== dropdown && d.classList.contains('active')) {
+                    d.classList.remove('active');
+                    const otherContent = d.querySelector('.dropdown-content');
+                    const otherArrow = d.querySelector('.arrow-down');
+                    if (otherContent) {
+                        otherContent.style.maxHeight = '0';
+                        otherContent.style.opacity = '0';
+                        otherContent.style.marginTop = '0';
                     }
-                });
-            });
-
-            document.addEventListener('click', function (e) {
-                if (!e.target.closest('.dropdown')) {
-                    dropdowns.forEach(dropdown => {
-                        dropdown.classList.remove('active');
-                        const link = dropdown.querySelector('a');
-                        if (link) link.setAttribute('aria-expanded', 'false');
-                    });
+                    if (otherArrow) {
+                        otherArrow.style.transform = 'rotate(0deg)';
+                    }
                 }
             });
+            
+            // Toggle le dropdown actuel
+            dropdown.classList.toggle('active');
+            
+            if (dropdown.classList.contains('active')) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                content.style.opacity = '1';
+                content.style.marginTop = '8px';
+                arrow.style.transform = 'rotate(180deg)';
+            } else {
+                content.style.maxHeight = '0';
+                content.style.opacity = '0';
+                content.style.marginTop = '0';
+                arrow.style.transform = 'rotate(0deg)';
+            }
         });
+    });
+    
+    // Gérer les liens simples sur mobile
+    const simpleLinks = mobileNav.querySelectorAll('li:not(.mobile-dropdown)');
+    simpleLinks.forEach(link => {
+        const anchor = link.querySelector('a');
+        if (anchor) {
+            anchor.addEventListener('click', function() {
+                closeMobileMenu();
+            });
+        }
+    });
+    
+    // Fermer le menu mobile
+    function closeMobileMenu() {
+        hamburgerBtn.classList.remove('active');
+        mobileNav.classList.add('hidden');
+        document.body.classList.remove('menu-open');
+        
+        // Réinitialiser tous les dropdowns
+        const allDropdowns = mobileNav.querySelectorAll('.mobile-dropdown');
+        allDropdowns.forEach(d => {
+            d.classList.remove('active');
+            const content = d.querySelector('.dropdown-content');
+            const arrow = d.querySelector('.arrow-down');
+            if (content) {
+                content.style.maxHeight = '0';
+                content.style.opacity = '0';
+                content.style.marginTop = '0';
+            }
+            if (arrow) {
+                arrow.style.transform = 'rotate(0deg)';
+            }
+        });
+    }
+    
+    // Fermer le menu lors du redimensionnement de la fenêtre
+    let resizeTimer;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            if (window.innerWidth >= 1024) {
+                closeMobileMenu();
+                // Réinitialiser l'affichage pour desktop
+                mobileNav.classList.add('hidden');
+            }
+        }, 250);
+    });
+    
+    // Fermer le menu lors du clic en dehors
+    document.addEventListener('click', function(e) {
+        if (!navContainer.contains(e.target) && !mobileNav.classList.contains('hidden')) {
+            closeMobileMenu();
+        }
+    });
+});
     </script>
+
+  
 </body>
 </html>

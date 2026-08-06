@@ -302,7 +302,7 @@
     </footer>
 
 
-        <!-- Script JavaScript pour la gestion des menus déroulants sur mobile et desktop -->
+    <!-- Script JavaScript pour la gestion des menus déroulants sur mobile et desktop -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Créer le bouton hamburger pour mobile
