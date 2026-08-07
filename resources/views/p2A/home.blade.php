@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>P2A Partners - Expertise Comptable, Audit et Conseil au Sénégal et dans l'espace OHADA</title>
+       <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Styles globaux & Variables */
         :root {
@@ -33,165 +35,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Navigation haut de gamme */
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2.5rem;
-        }
-
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 0.85rem;
-            text-decoration: none;
-        }
-
-        .logo-icon {
-            width: 36px;
-            height: 36px;
-            background: var(--primary);
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-weight: 700;
-            font-size: 0.95rem;
-            box-shadow: 0 4px 12px rgba(11, 37, 69, 0.15);
-        }
-
-        .logo-text {
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: var(--primary);
-            letter-spacing: 0.5px;
-            line-height: 1.1;
-        }
-
-        .logo-text span {
-            display: block;
-            font-size: 0.65rem;
-            font-weight: 500;
-            color: var(--text-muted);
-            letter-spacing: 1.5px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            color: #0b131d;
-            list-style: none;
-            align-items: center;
-            margin: 0 auto;
-        }
-
-        .nav-links > li {
-            position: relative;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-main);
-            font-size: 0.9rem;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 0.35rem;
-            padding: 0.5rem 0;
-            transition: var(--transition-smooth);
-        }
-
-        .nav-links a:hover {
-            color: var(--accent);
-        }
-
-        /* Menus Déroulants (Dropdown UX amélioré) */
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: var(--white);
-            min-width: 270px;
-            box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.08), 0 0 0
-        1px rgba(0, 0, 0, 0.04);
-                    border-radius: 8px;
-                    padding: 0.6rem 0;
-                    z-index: 1001;
-                    list-style: none;
-                    flex-direction: column;
-                    transform: translateY(8px);
-                    opacity: 0;
-                    transition: var(--transition-smooth);
-                }
-
-                .dropdown-content li {
-                    width: 100%;
-                }
-
-                .dropdown-content a {
-                    padding: 0.65rem 1.25rem;
-                    color: var(--text-main);
-                    white-space: nowrap;
-                    font-size: 0.88rem;
-                    font-weight: 400;
-                    transition: var(--transition-smooth);
-                }
-
-                .dropdown-content a:hover {
-                    background-color: #f1f5f9;
-                    color: var(--accent);
-                    padding-left: 1.4rem;
-                }
-
-                .dropdown.active .dropdown-content,
-                .dropdown:hover .dropdown-content {
-                    display: flex;
-                    transform: translateY(0);
-                    opacity: 1;
-                }
-
-                .arrow-down {
-                    font-size: 0.6rem;
-                    color: var(--text-muted);
-                    transition: transform 0.3s ease;
-                }
-
-                .dropdown:hover .arrow-down {
-                    transform: rotate(180deg);
-                }
-
-                /* Sélecteur de langue */
-                .lang-switch {
-                    font-size: 0.85rem;
-                    font-weight: 600;
-                    color: var(--primary);
-                    text-decoration: none;
-                    padding: 0.4rem 0.8rem;
-                    border: 1px solid var(--border-color);
-                    border-radius: 6px;
-                    transition: var(--transition-smooth);
-                    background: var(--white);
-                }
-
-                .lang-switch:hover {
-                    border-color: var(--accent);
-                    color: var(--accent);
-                    background: #f8fafc;
-                }
 
                 /* Section Hero (Visuel IA / Abstrait Corporate Lumineux) */
                 .hero {
@@ -301,7 +144,7 @@
 
                 .services-grid {
                     display: grid;
-                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-columns: repeat(2, 1fr);
                     gap: 1.5rem;
                 }
 
@@ -314,7 +157,7 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
-                    min-height: 220px;
+                    min-height: 200px;
                     transition: var(--transition-smooth);
                     background-color: var(--white);
                     position: relative;
@@ -384,8 +227,7 @@
                     color: var(--white);
                 }
 
-                /* Section 3 & 4 : Sections alternées avec design épuré et
-        visuels IA/Minimalistes */
+        /* Section 3 & 4 : Sections alternées avec design épuré et visuels IA/Minimalistes */
         .split-section {
             background-color: var(--bg-light);
             padding: 6rem 2.5rem;
@@ -719,322 +561,122 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-
-        @media (max-width: 960px) {
-            .nav-links {
-                display: none;
-            }
-            .hero h1 {
-                font-size: 2.6rem;
-            }
-            .split-container, .split-container.reverse,
-        .newsletter-container, .stats-container {
-                grid-template-columns: 1fr;
-                gap: 2.5rem;
-                direction: ltr;
-            }
-            .services-grid, .insights-grid {
-                grid-template-columns: 1fr;
-            }
-            .footer-bottom {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
-            }
-            .footer-bottom-links {
-                justify-content: center;
-            }
+               /* Animation du menu déroulant */
+        .group:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        /* Police éditoriale */
+        .font-editorial {
+            font-family: Georgia, serif;
         }
 
-/* Styles pour le bouton hamburger */
-.hamburger-menu {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 22px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    z-index: 1000;
-}
+        /* Styles pour le menu mobile */
+        .mobile-menu {
+            max-height: 80vh;
+            overflow-y: auto;
+        }
 
-.hamburger-menu .bar {
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: #ffffff;
-    transition: all 0.3s ease-in-out;
-    border-radius: 2px;
-}
+        .mobile-submenu {
+            border-left: 2px solid #0b131d;
+            margin-left: 8px;
+        }
 
-/* Animation du hamburger en X */
-.hamburger-menu.active .bar:nth-child(1) {
-    transform: translateY(10px) rotate(45deg);
-    background-color: #ffffff;
-}
+        .mobile-submenu a {
+            padding-left: 20px;
+        }
 
-.hamburger-menu.active .bar:nth-child(2) {
-    opacity: 0;
-}
+        /* Animation du hamburger */
+        button span {
+            transition: all 0.3s ease-in-out;
+        }
 
-.hamburger-menu.active .bar:nth-child(3) {
-    transform: translateY(-10px) rotate(-45deg);
-    background-color: #ffffff;
-}
+        /* Amélioration du scroll sur mobile */
+        .mobile-menu::-webkit-scrollbar {
+            width: 4px;
+        }
 
-/* Styles pour le menu mobile - FOND NOIR VISIBLE */
-.mobile-nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 85%;
-    max-width: 400px;
-    height: 100vh;
-    background-color: #000000 !important;
-    padding: 80px 25px 30px;
-    overflow-y: auto;
-    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 999;
-    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.8);
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
-}
+        .mobile-menu::-webkit-scrollbar-thumb {
+            background: #0b131d; 
+            border-radius: 2px;
+        }
 
-.mobile-nav:not(.hidden) {
-    right: 0;
-}
+        /* Overlay optionnel */
+        .mobile-menu {
+            position: absolute;
+            top: 10%;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
 
-/* Overlay quand le menu est ouvert */
-body.menu-open::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 998;
-    backdrop-filter: blur(4px);
-}
+        /* Styles pour le menu mobile */
+        .mobile-menu {
+            max-height: 80vh;
+            overflow-y: auto;
+        }
 
-/* Styles des items du menu mobile */
-.mobile-nav ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
+        .mobile-submenu {
+            border-left: 2px solid #0b131d;
+            margin-left: 8px;
+        }
 
-.mobile-nav li {
-    list-style: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
+        .mobile-submenu a {
+            padding-left: 20px;
+        }
 
-.mobile-nav > li:last-child {
-    border-bottom: none;
-}
+        /* Animation du hamburger */
+        button span {
+            transition: all 0.3s ease-in-out;
+        }
 
-.mobile-nav a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #0b131d !important;
-    text-decoration: none;
-    padding: 15px 0;
-    font-size: 16px;
-    font-weight: 500;
-    transition: all 0.2s ease;
-}
+        /* Amélioration du scroll sur mobile */
+        .mobile-menu::-webkit-scrollbar {
+            width: 4px;
+        }
 
-.mobile-nav a:hover {
-    color: #ffffff !important;
-    padding-left: 5px;
-}
+        .mobile-menu::-webkit-scrollbar-thumb {
+            background: #0b131d; 
+            border-radius: 2px;
+        }
 
-/* Flèches dans le menu mobile */
-.mobile-nav .arrow-down {
-    font-size: 12px;
-    transition: transform 0.3s ease;
-    display: inline-block;
-    color: #0b131d;
-    margin-left: 10px;
-}
+        /* Overlay optionnel */
+        .mobile-menu {
+            position: absolute;
+            top: 10%;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
 
-/* Contenu des dropdowns en mobile */
-.mobile-nav .dropdown-content {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    padding-left: 20px;
-    transition: all 0.3s ease-in-out;
-    margin-top: 0;
-    background-color: transparent;
-}
-
-.mobile-nav .mobile-dropdown.active .dropdown-content {
-    max-height: 600px;
-    opacity: 1;
-    margin-top: 5px;
-}
-
-.mobile-nav .dropdown-content li {
-    border-bottom: none;
-    background-color: transparent;
-}
-
-.mobile-nav .dropdown-content a {
-    padding: 12px 0;
-    font-size: 14px;
-    color: #0b131d !important;
-    padding-left: 15px;
-    border-left: 3px solid transparent;
-    font-weight: 400;
-}
-
-.mobile-nav .dropdown-content a:hover {
-    color: #ffffff !important;
-    border-left-color: #3b82f6;
-    padding-left: 20px;
-}
-
-/* Style des liens simples */
-.mobile-nav li:not(.mobile-dropdown) a {
-    color: #e5e7eb !important;
-    font-weight: 500;
-}
-
-.mobile-nav li:not(.mobile-dropdown) a:hover {
-    color: #ffffff !important;
-    padding-left: 5px;
-}
-
-/* Responsive */
-@media (max-width: 1023px) {
-    .hamburger-menu {
-        display: flex;
-    }
-    
-    .nav-links:not(.mobile-nav) {
-        display: none !important;
-    }
-}
-
-@media (min-width: 1024px) {
-    .mobile-nav {
-        display: none !important;
-    }
-    
-    .hamburger-menu {
-        display: none !important;
-    }
-}
-
-/* Style du scroll pour mobile */
-.mobile-nav::-webkit-scrollbar {
-    width: 4px;
-}
-
-.mobile-nav::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.mobile-nav::-webkit-scrollbar-thumb {
-    background: #0b131d;
-    border-radius: 4px;
-}
-
-/* Animation d'entrée des items */
-.mobile-nav li {
-    opacity: 0;
-    transform: translateX(20px);
-    animation: slideIn 0.3s ease forwards;
-}
-
-.mobile-nav li:nth-child(1) { animation-delay: 0.05s; }
-.mobile-nav li:nth-child(2) { animation-delay: 0.1s; }
-.mobile-nav li:nth-child(3) { animation-delay: 0.15s; }
-.mobile-nav li:nth-child(4) { animation-delay: 0.2s; }
-.mobile-nav li:nth-child(5) { animation-delay: 0.25s; }
-.mobile-nav li:nth-child(6) { animation-delay: 0.3s; }
-.mobile-nav li:nth-child(7) { animation-delay: 0.35s; }
-
-@keyframes slideIn {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* Supprimer l'animation quand le menu est caché */
-.mobile-nav.hidden li {
-    animation: none;
-    opacity: 0;
-    </style>
+</style>
 </head>
 <body>
 
     <!-- En-tête / Navbar avec menus déroulants -->
-    <header>
-        <div class="nav-container">
-            <a href="accueil" class="logo-area">
-                <img src="images/logo.jpeg" width="70">
-                <!-- <div class="logo-icon">P2A</div>
-                <div class="logo-text">
-                    P2A PARTNERS
-                    <span>PARTNERS</span>
-                </div> -->
-            </a>
-
-            <ul class="nav-links">
-                <li class="dropdown">
-                    <a href="clients" aria-haspopup="true" aria-expanded="false">
-                        Qui nous accompagnons <span class="arrow-down">▼</span>
-                    </a>
-                    <ul class="dropdown-content">
-                        <li><a href="servicesfinanciers">Services financiers</a></li>
-                        <li><a href="industriesetmines">Industries & mines</a></li>
-                        <li><a href="automobile">Automobile</a></li>
-                        <li><a href="telecometmultimedia">Télécom & multimédia</a></li>
-                        <li><a href="transportetlogistique">Transport & logistique</a></li>
-                        <li><a href="serviceaccompagnement">Services</a></li>
-                        <li><a href="ongetsecteur">ONG & secteur public</a></li>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-                    <a href="services" aria-haspopup="true" aria-expanded="false">
-                        Ce que nous faisons <span class="arrow-down">▼</span>
-                    </a>
-                    <ul class="dropdown-content">
-                        <li><a href="expertisecomptable">Expertise comptable</a></li>
-                        <li><a href="audit">Audit & commissariat aux comptes</a></li>
-                        <li><a href="fiscalité">Fiscalité & conformité</a></li>
-                        <li><a href="conseiletorganisation">Conseil & organisation</a></li>
-                        <li><a href="paieetsocial">Paie & social</a></li>
-                        <li><a href="conseilfinancier">Conseil Financier</a></li>
-                        <li><a href="assistancejuridique">Assistance Juridique</a></li>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-                    <a href="apropos" aria-haspopup="true" aria-expanded="false">
-                        Qui nous sommes <span class="arrow-down">▼</span>
-                    </a>
-                    <ul class="dropdown-content">
-                        <li><a href="apropos">Qui nous sommes</a></li>
-                        <li><a href="carrières">Carrières</a></li>
-                    </ul>
-                </li>
-
-                <li><a href="insights">Insights</a></li>
-                <li><a href="actualites">Actualités</a></li>
-                <li><a href="contact">Contact</a></li>
-            </ul>
-
-            <div class="lang-area">
-                <a href="#" class="lang-switch">FR | EN</a>
+   <header class="flex items-center justify-between px-6 lg:px-12 py-5 border-b border-gray-800 bg-[#ffff] text-[#0b131d]">
+        <div class="flex items-center space-x-2">
+            <div class="text-blue-500 font-bold text-xl tracking-wider flex items-center">
+                <a href="/" class="logo-area">
+                    <img src="images/logo.jpeg" width="70">
+                    <!-- <div class="logo-icon">P2A</div>
+                    <div class="logo-text">
+                        P2A PARTNERS
+                        <span>PARTNERS</span>
+                    </div> -->
+                </a>
             </div>
         </div>
+
+        <!-- NAVIGATION PRINCIPALE AVEC MENUS DÉROULANTS -->
+        @include('partials.navbar')
+
+        
     </header>
 
     <!-- Section 1 : Hero -->
@@ -1044,7 +686,7 @@ body.menu-open::before {
             <p>Expertise comptable, audit et conseil stratégique pour les organisations qui évoluent au Sénégal et dans l'espace OHADA.</p>
             <div class="hero-buttons">
                 <a href="contact" class="btn-primary">Prendre rendez-vous &rarr;</a>
-                <a href="services" class="btn-outline">Découvrir nos expertises</a>
+                <a href="serviceaccompagnement" class="btn-outline">Découvrir nos expertises</a>
             </div>
         </div>
     </section>
@@ -1141,19 +783,15 @@ body.menu-open::before {
         <div class="stats-container">
             <div class="stat-box">
                 <div class="stat-number">20+</div>
-                <div class="stat-label">Années d'expérience cumulée
-des associés</div>
+                <div class="stat-label">Années d'expérience cumulée des associés</div>
             </div>
             <div class="stat-box">
                 <div class="stat-number">7</div>
-                <div class="stat-label">Lignes de service coordonnées
-en synergie</div>
+                <div class="stat-label">Lignes de service coordonnées en synergie</div>
             </div>
             <div class="stat-box">
-                <div class="stat-number" style="font-size: 2.5rem;
-padding-top: 0.3rem;">OHADA & Monde</div>
-                <div class="stat-label">Une expertise locale ouverte
-sur l'international</div>
+                <div class="stat-number" style="font-size: 2.5rem; padding-top: 0.3rem;">OHADA & Monde</div>
+                <div class="stat-label">Une expertise locale ouverte sur l'international</div>
             </div>
         </div>
     </section>
@@ -1162,41 +800,32 @@ sur l'international</div>
     <section class="insights-section">
         <div class="insights-header">
             <div>
-                <div class="section-tag" style="margin-bottom:
-0;">INSIGHTS</div>
+                <div class="section-tag" style="margin-bottom: 0;">INSIGHTS</div>
                 <h2>Points de vue utiles</h2>
-                <p style="color: var(--text-muted); font-size:
-0.95rem; margin-top: 0.5rem;">Analyses stratégiques pour comprendre
-les règles, anticiper les risques et structurer vos décisions.</p>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.5rem;">Analyses stratégiques pour comprendre les règles, anticiper les risques et structurer vos décisions.</p>
             </div>
             <a href="insights" class="insights-all">Tous les articles →</a>
         </div>
         <div class="insights-grid">
-            <a href="insights/fiscalite-senegal" class="insight-card">
+            <a href="insights#btn-fiscalite" class="insight-card">
                 <div>
                     <span class="insight-tag">FISCALITÉ</span>
-                    <h3>Fiscalité sénégalaise : préparer un contrôle
-avant l'avis</h3>
-                    <p>Une documentation rigoureuse réduit
-l'incertitude et fluidifie le dialogue avec l'administration.</p>
+                    <h3>Fiscalité sénégalaise : préparer un contrôle avant l'avis</h3>
+                    <p>Une documentation rigoureuse réduit l'incertitude et fluidifie le dialogue avec l'administration.</p>
                 </div>
             </a>
-            <a href="insights/cloture-syscohada" class="insight-card">
+            <a href="insights#btn-syscohada" class="insight-card">
                 <div>
                     <span class="insight-tag">SYSCOHADA</span>
-                    <h3>Clôture SYSCOHADA : organiser un calendrier
-réellement utile</h3>
-                    <p>Structurez les responsabilités pour sécuriser
-la qualité de vos états financiers.</p>
+                    <h3>Clôture SYSCOHADA : organiser un calendrier réellement utile</h3>
+                    <p>Structurez les responsabilités pour sécuriser la qualité de vos états financiers.</p>
                 </div>
             </a>
-            <a href="insights/ifrs-18" class="insight-card">
+            <a href="insights#btn-ifrs" class="insight-card">
                 <div>
                     <span class="insight-tag">IFRS</span>
-                    <h3>IFRS 18 remplace IAS 1 : ce qui change dans la
-performance</h3>
-                    <p>Nouveaux sous-totaux et indicateurs encadrés :
-les points clés à préparer avant 2027.</p>
+                    <h3>IFRS 18 remplace IAS 1 : ce qui change dans la performance</h3>
+                    <p>Nouveaux sous-totaux et indicateurs encadrés : les points clés à préparer avant 2027.</p>
                 </div>
             </a>
         </div>
@@ -1268,143 +897,146 @@ Sénégal<br>contact@p2apartners.com</p>
 
     <!-- Script JavaScript pour la gestion des menus déroulants sur mobile et desktop -->
     <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Sélectionner la navigation
-    const nav = document.querySelector('.nav-links');
-    const navContainer = nav.parentElement;
-    
-    // Créer le bouton hamburger pour mobile
-    const hamburgerBtn = document.createElement('button');
-    hamburgerBtn.className = 'hamburger-menu lg:hidden';
-    hamburgerBtn.setAttribute('aria-label', 'Menu');
-    hamburgerBtn.innerHTML = `
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    `;
-    
-    // Insérer le bouton avant la navigation
-    navContainer.insertBefore(hamburgerBtn, nav);
-    
-    // Cloner la navigation pour le mobile
-    const mobileNav = nav.cloneNode(true);
-    mobileNav.className = 'nav-links mobile-nav hidden';
-    mobileNav.id = 'mobile-nav';
-    
-    // Insérer la navigation mobile après la navigation originale
-    navContainer.appendChild(mobileNav);
-    
-    // Gérer l'ouverture/fermeture du menu mobile
-    hamburgerBtn.addEventListener('click', function() {
-        this.classList.toggle('active');
-        mobileNav.classList.toggle('hidden');
-        document.body.classList.toggle('menu-open');
-    });
-    
-    // Gérer les dropdowns en mobile (accordéon)
-    const mobileDropdowns = mobileNav.querySelectorAll('.dropdown');
-    mobileDropdowns.forEach(dropdown => {
-        const link = dropdown.querySelector('a');
-        const content = dropdown.querySelector('.dropdown-content');
-        const arrow = link.querySelector('.arrow-down');
-        
-        // Supprimer le comportement de hover
-        dropdown.classList.remove('dropdown');
-        dropdown.classList.add('mobile-dropdown');
-        
-        // Ajouter un écouteur pour le clic
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
+        document.addEventListener('DOMContentLoaded', function() {
+            // Créer le bouton hamburger pour mobile
+            const nav = document.querySelector('nav');
+            const navContainer = nav.parentElement;
             
-            // Fermer tous les autres dropdowns
-            const allDropdowns = mobileNav.querySelectorAll('.mobile-dropdown');
-            allDropdowns.forEach(d => {
-                if (d !== dropdown && d.classList.contains('active')) {
-                    d.classList.remove('active');
-                    const otherContent = d.querySelector('.dropdown-content');
-                    const otherArrow = d.querySelector('.arrow-down');
-                    if (otherContent) {
-                        otherContent.style.maxHeight = '0';
-                        otherContent.style.opacity = '0';
-                        otherContent.style.marginTop = '0';
-                    }
-                    if (otherArrow) {
-                        otherArrow.style.transform = 'rotate(0deg)';
-                    }
+            // Créer le bouton hamburger
+            const hamburgerBtn = document.createElement('button');
+            hamburgerBtn.className = 'lg:hidden flex flex-col items-center text-[#0b131d] justify-center w-10 h-10 space-y-1.5 focus:outline-none';
+            hamburgerBtn.setAttribute('aria-label', 'Menu');
+            hamburgerBtn.innerHTML = `
+                <span class="block w-6 h-0.5 bg-[#0b131d] transition-all duration-300"></span>
+                <span class="block w-6 h-0.5 bg-[#0b131d] transition-all duration-300"></span>
+                <span class="block w-6 h-0.5 bg-[#0b131d] transition-all duration-300"></span>
+            `;
+            
+            // Insérer le bouton avant la navigation
+            navContainer.insertBefore(hamburgerBtn, nav);
+            
+            // Créer le menu mobile
+            const mobileMenu = document.createElement('div');
+            mobileMenu.className = 'mobile-menu lg:hidden hidden w-full mt-1 bg-[#ffff] text-[#0b131d] border-t border-gray-800';
+            mobileMenu.innerHTML = `
+                <div class="container mx-auto px-4 py-1 space-y-2">
+                    <!-- Dropdown 1 : Qui nous accompagnons -->
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-toggle w-full text-left text-sm hover: text-[#0b131d] py-2 flex items-center justify-between focus:outline-none">
+                            <span>Qui nous accompagnons</span>
+                            <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="mobile-submenu hidden pl-4 space-y-1">
+                            <a href="servicesfinanciers" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Services financiers</a>
+                            <a href="industriesetmines" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Industries & mines</a>
+                            <a href="automobile" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Automobile</a>
+                            <a href="telecometmultimedia" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Télécom & multimédia</a>
+                            <a href="transportetlogistique" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Transport & logistique</a>
+                            <a href="serviceaccompagnement" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Services</a>
+                            <a href="ongetsecteur" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">ONG & secteur public</a>
+                        </div>
+                    </div>
+
+                    <!-- Dropdown 2 : Ce que nous faisons -->
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-toggle w-full text-left text-sm hover: bg-[#ffff] text-[#0b131d] py-2 flex items-center justify-between focus:outline-none">
+                            <span>Ce que nous faisons</span>
+                            <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="mobile-submenu hidden pl-4 space-y-1">
+                            <a href="expertisecomptable" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Expertise comptable</a>
+                            <a href="audit" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Audit & commissariat aux comptes</a>
+                            <a href="fiscalité" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Fiscalité & conformité</a>
+                            <a href="conseiletorganisation" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Conseil & organisation</a>
+                            <a href="paieetsocial" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Paie & social</a>
+                            <a href="conseilfinancier" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Conseil Financier</a>
+                            <a href="assistancejuridique" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Assistance Juridique</a>
+                        </div>
+                    </div>
+
+                    <!-- Dropdown 3 : Qui nous sommes -->
+                    <div class="mobile-dropdown">
+                        <button class="mobile-dropdown-toggle w-full text-left text-sm hover: bg-[#ffff] text-[#0b131d] py-2 flex items-center justify-between focus:outline-none">
+                            <span>Qui nous sommes</span>
+                            <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="mobile-submenu hidden pl-4 space-y-1">
+                            <a href="apropos" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Qui nous sommes</a>
+                            <a href="carrières" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Carrières</a>
+                        </div>
+                    </div>
+
+                    <!-- Liens simples -->
+                    <a href="insights" class="block text-sm bg-[#ffff] text-[#0b131d] hover:text-white py-2">Insights</a>
+                    <a href="actualites" class="block text-sm bg-[#ffff] text-[#0b131d] hover:text-white py-2">Actualités</a>
+                    <a href="contact" class="block text-sm bg-[#ffff] text-[#0b131d] hover:text-white py-2">Contact</a>
+                </div>
+            `;
+            
+            // Insérer le menu mobile après la navigation
+            navContainer.appendChild(mobileMenu);
+            
+            // Gérer l'ouverture/fermeture du menu mobile
+            hamburgerBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                
+                // Animation du hamburger
+                const spans = this.querySelectorAll('span');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                    spans[1].style.opacity = '0';
+                    spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+                } else {
+                    spans[0].style.transform = 'rotate(0) translate(0, 0)';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'rotate(0) translate(0, 0)';
                 }
             });
-            
-            // Toggle le dropdown actuel
-            dropdown.classList.toggle('active');
-            
-            if (dropdown.classList.contains('active')) {
-                content.style.maxHeight = content.scrollHeight + 'px';
-                content.style.opacity = '1';
-                content.style.marginTop = '8px';
-                arrow.style.transform = 'rotate(180deg)';
-            } else {
-                content.style.maxHeight = '0';
-                content.style.opacity = '0';
-                content.style.marginTop = '0';
-                arrow.style.transform = 'rotate(0deg)';
-            }
-        });
-    });
-    
-    // Gérer les liens simples sur mobile
-    const simpleLinks = mobileNav.querySelectorAll('li:not(.mobile-dropdown)');
-    simpleLinks.forEach(link => {
-        const anchor = link.querySelector('a');
-        if (anchor) {
-            anchor.addEventListener('click', function() {
-                closeMobileMenu();
-            });
-        }
-    });
-    
-    // Fermer le menu mobile
-    function closeMobileMenu() {
-        hamburgerBtn.classList.remove('active');
-        mobileNav.classList.add('hidden');
-        document.body.classList.remove('menu-open');
         
-        // Réinitialiser tous les dropdowns
-        const allDropdowns = mobileNav.querySelectorAll('.mobile-dropdown');
-        allDropdowns.forEach(d => {
-            d.classList.remove('active');
-            const content = d.querySelector('.dropdown-content');
-            const arrow = d.querySelector('.arrow-down');
-            if (content) {
-                content.style.maxHeight = '0';
-                content.style.opacity = '0';
-                content.style.marginTop = '0';
-            }
-            if (arrow) {
-                arrow.style.transform = 'rotate(0deg)';
-            }
+            // Gérer l'ouverture/fermeture des sous-menus
+            const dropdownToggles = mobileMenu.querySelectorAll('.mobile-dropdown-toggle');
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const submenu = this.nextElementSibling;
+                    const icon = this.querySelector('svg');
+                    
+                    // Fermer tous les autres sous-menus
+                    const allSubmenus = mobileMenu.querySelectorAll('.mobile-submenu');
+                    allSubmenus.forEach(menu => {
+                        if (menu !== submenu) {
+                            menu.classList.add('hidden');
+                            const parentIcon = menu.previousElementSibling.querySelector('svg');
+                            if (parentIcon) {
+                                parentIcon.style.transform = 'rotate(0)';
+                            }
+                        }
+                    });
+                    
+                    // Ouvrir/fermer le sous-menu cliqué
+                    submenu.classList.toggle('hidden');
+                    icon.style.transform = submenu.classList.contains('hidden') ? 'rotate(0)' : 'rotate(180deg)';
+                });
+            });
+        
+                // Fermer le menu mobile lors du clic sur un lien
+                const mobileLinks = mobileMenu.querySelectorAll('a');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                        // Réinitialiser le hamburger
+                        const spans = hamburgerBtn.querySelectorAll('span');
+                        spans[0].style.transform = 'rotate(0) translate(0, 0)';
+                        spans[1].style.opacity = '1';
+                        spans[2].style.transform = 'rotate(0) translate(0, 0)';
+                    });
+                });
         });
-    }
-    
-    // Fermer le menu lors du redimensionnement de la fenêtre
-    let resizeTimer;
-    window.addEventListener('resize', function() {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => {
-            if (window.innerWidth >= 1024) {
-                closeMobileMenu();
-                // Réinitialiser l'affichage pour desktop
-                mobileNav.classList.add('hidden');
-            }
-        }, 250);
-    });
-    
-    // Fermer le menu lors du clic en dehors
-    document.addEventListener('click', function(e) {
-        if (!navContainer.contains(e.target) && !mobileNav.classList.contains('hidden')) {
-            closeMobileMenu();
-        }
-    });
-});
     </script>
 
   

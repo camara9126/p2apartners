@@ -1,7 +1,4 @@
-        <!-- Langue -->
-        <div class="flex items-center space-x-4">
-            <span class="text-xs text-gray-300"><strong class="text-white">FR</strong> | EN</span>
-        </div>
+       
         
         <nav class="hidden lg:flex items-center space-x-8 text-sm text-gray-300">
             
@@ -54,4 +51,9 @@
             <a href="insights" class="text-[#0b131d] hover:text-gray-400">Insights</a>
             <a href="actualites" class="text-[#0b131d] hover:text-gray-400">Actualités</a>
             <a href="contact" class="text-[#0b131d] hover:text-gray-400">Contact</a>
+
+             <!-- Langue -->
+        <div class="flex items-center space-x-4">
+            <span class="text-xs text-gray-300"><strong class="text-white">FR</strong> | EN</span>
+        </div>
         </nav>
