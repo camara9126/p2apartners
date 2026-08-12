@@ -106,7 +106,7 @@
             box-shadow: 0 20px 60px rgba(0,0,0,0.5);
         }
     </style>
-    
+
     <style>
         /* ----- VARIABLES & RESET ----- */
         :root {
@@ -724,51 +724,51 @@
 
         <div class="services-grid">
             <a href="expertisecomptable" class="service-card">
-                <span class="service-number">01</span>
+                <div class="service-number">01</div>
                 <div class="service-title-row">
-                    <h3>Expertise comptable</h3>
+                    <h3>{{ __('messages.Expertise comptable') }}</h3>
                     <span class="service-arrow">→</span>
                 </div>
             </a>
             <a href="audit" class="service-card">
-                <span class="service-number">02</span>
+                <div class="service-number">02</div>
                 <div class="service-title-row">
-                    <h3>Audit &amp; commissariat</h3>
+                    <h3>{{ __('messages.Audit & commissariat aux comptes') }}</h3>
                     <span class="service-arrow">→</span>
                 </div>
             </a>
             <a href="fiscalité" class="service-card">
-                <span class="service-number">03</span>
+                <div class="service-number">03</div>
                 <div class="service-title-row">
-                    <h3>Fiscalité &amp; conformité</h3>
+                    <h3>{{ __('messages.Fiscalité & conformité') }}</h3>
                     <span class="service-arrow">→</span>
                 </div>
             </a>
             <a href="conseiletorganisation" class="service-card">
-                <span class="service-number">04</span>
+                <div class="service-number">04</div>
                 <div class="service-title-row">
-                    <h3>Conseil &amp; organisation</h3>
+                    <h3>{{ __('messages.Conseil & organisation') }}</h3>
                     <span class="service-arrow">→</span>
                 </div>
             </a>
             <a href="paieetsocial" class="service-card">
-                <span class="service-number">05</span>
+                <div class="service-number">05</div>
                 <div class="service-title-row">
-                    <h3>Paie &amp; social</h3>
+                    <h3>{{ __('messages.Paie & social') }}</h3>
                     <span class="service-arrow">→</span>
                 </div>
             </a>
             <a href="conseilfinancier" class="service-card">
-                <span class="service-number">06</span>
+                <div class="service-number">06</div>
                 <div class="service-title-row">
-                    <h3>Conseil Financier</h3>
+                    <h3>{{ __('messages.Conseil Financier') }}</h3>
                     <span class="service-arrow">→</span>
                 </div>
             </a>
-            <a href="assistancejuridique" class="service-card">
-                <span class="service-number">07</span>
+            <a href="assistancejuridique" class="service-card" style="grid-column: span 3;">
+                <div class="service-number">07</div>
                 <div class="service-title-row">
-                    <h3>Assistance Juridique</h3>
+                    <h3>{{ __('messages.Assistance Juridique') }}</h3>
                     <span class="service-arrow">→</span>
                 </div>
             </a>
