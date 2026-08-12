@@ -4,173 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IFRS 18 remplace IAS 1 : ce qui change dans la présentation de la performance - P2A Partners</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>    
     <style>
-        /* Styles globaux */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* Animation du menu déroulant */
+        .group:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        /* Police éditoriale */
+        .font-editorial {
+            font-family: Georgia, serif;
         }
 
-        body {
-            color: #1a1a1a;
-            background-color: #f8f9fa;
-            line-height: 1.6;
+        /* Styles pour le menu mobile */
+        .mobile-menu {
+            max-height: 80vh;
+            overflow-y: auto;
         }
 
-        /* Navigation */
-        header {
-            background: #ffffff;
-            border-bottom: 1px solid #e5e5e5;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+        .mobile-submenu {
+            border-left: 2px solid #0b131d;
+            margin-left: 8px;
         }
 
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.8rem 2rem;
+        .mobile-submenu a {
+            padding-left: 20px;
         }
 
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            text-decoration: none;
+        /* Animation du hamburger */
+        button span {
+            transition: all 0.3s ease-in-out;
         }
 
-        .logo-icon {
-            width: 32px;
-            height: 32px;
-            background: #0b2545;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ffffff;
-            font-weight: bold;
-            font-size: 0.9rem;
+        /* Amélioration du scroll sur mobile */
+        .mobile-menu::-webkit-scrollbar {
+            width: 4px;
         }
 
-        .logo-text {
-            font-weight: 700;
-            font-size: 1rem;
-            color: #0b2545;
-            letter-spacing: 0.5px;
-            line-height: 1.2;
+        .mobile-menu::-webkit-scrollbar-thumb {
+            background: #0b131d; 
+            border-radius: 2px;
         }
 
-        .logo-text span {
-            display: block;
-            font-size: 0.65rem;
-            font-weight: 500;
-            color: #64748b;
-            letter-spacing: 1px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1.8rem;
-            list-style: none;
-            align-items: center;
-            margin: 0 auto;
-        }
-
-        .nav-links > li {
-            position: relative;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #333333;
-            font-size: 0.9rem;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-            padding: 0.5rem 0;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: #1d4ed8;
-        }
-
-        /* Menus Déroulants (Dropdown) */
-        .dropdown-content {
-            display: none;
+        /* Overlay optionnel */
+        .mobile-menu {
             position: absolute;
-            top: 100%;
+            top: 10%;
             left: 0;
-            background-color: #ffffff;
-            min-width: 260px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            border-radius: 6px;
-            padding: 0.5rem 0;
-            z-index: 1001;
-            border: 1px solid #e2e8f0;
-            list-style: none;
-            flex-direction: column;
-        }
-
-        .dropdown-content li {
+            right: 0;
             width: 100%;
+            z-index: 1000;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
         }
 
-        .dropdown-content a {
-            padding: 0.6rem 1.25rem;
-            color: #334155;
-            white-space: nowrap;
-            font-size: 0.88rem;
-            font-weight: 400;
-            transition: background-color 0.2s, color 0.2s;
+        /* Styles pour le menu mobile */
+        .mobile-menu {
+            max-height: 80vh;
+            overflow-y: auto;
         }
 
-        .dropdown-content a:hover {
-            background-color: #f1f5f9;
-            color: #1d4ed8;
+        .mobile-submenu {
+            border-left: 2px solid #0b131d;
+            margin-left: 8px;
         }
 
-        .dropdown.active .dropdown-content,
-        .dropdown:hover .dropdown-content {
-            display: flex;
+        .mobile-submenu a {
+            padding-left: 20px;
         }
 
-        .arrow-down {
-            font-size: 0.65rem;
-            color: #64748b;
-            transition: transform 0.2s;
+        /* Animation du hamburger */
+        button span {
+            transition: all 0.3s ease-in-out;
         }
 
-        .dropdown:hover .arrow-down {
-            transform: rotate(180deg);
+        /* Amélioration du scroll sur mobile */
+        .mobile-menu::-webkit-scrollbar {
+            width: 4px;
         }
 
-        /* Sélecteur de langue */
-        .lang-area {
-            display: flex;
-            align-items: center;
+        .mobile-menu::-webkit-scrollbar-thumb {
+            background: #0b131d; 
+            border-radius: 2px;
         }
 
-        .lang-switch {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: #333333;
-            text-decoration: none;
-            padding: 0.3rem 0.6rem;
-            border: 1px solid #cbd5e1;
-            border-radius: 4px;
-            transition: all 0.2s;
-        }
-
-        .lang-switch:hover {
-            border-color: #1d4ed8;
-            color: #1d4ed8;
+        /* Overlay optionnel */
+        .mobile-menu {
+            position: absolute;
+            top: 10%;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
         }
 
         /* Section Hero avec image et dégradé à faible opacité */
@@ -444,11 +371,12 @@
                 </div> -->
             </a>
 
-            <!-- Liens de navigation centrés avec menus déroulants -->
-            @include('partials.navbar')
 
-          
         </div>
+        
+            <!-- Liens de navigation centrés avec menus déroulants -->
+            @include('partials.navbar')     
+        
     </header>
 
     <!-- Section Hero avec image thématique et filtre dégradé -->

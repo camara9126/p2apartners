@@ -4,44 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>P2A Partners - Expertise Comptable, Audit et Conseil au Sénégal et dans l'espace OHADA</title>
+    <!-- Bootstrap 5 CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Icon Image -->
+    <link rel="shortcut icon" href="images/logo.jpeg">
        <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Styles globaux & Variables */
-        :root {
-            --primary: #0b2545;
-            --primary-light: #13315c;
-            --accent: #1d4ed8;
-            --accent-hover: #1e40af;
-            --text-main: #1e293b;
-            --text-muted: #64748b;
-            --bg-light: #f8fafc;
-            --white: #ffffff;
-            --border-color: #e2e8f0;
-            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+                /* Styles globaux & Variables */
+                :root {
+                    --primary: #0b2545;
+                    --primary-light: #13315c;
+                    --accent: #1d4ed8;
+                    --accent-hover: #1e40af;
+                    --text-main: #1e293b;
+                    --text-muted: #64748b;
+                    --bg-light: #f8fafc;
+                    --white: #ffffff;
+                    --border-color: #e2e8f0;
+                    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-        }
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+                }
 
-        body {
-            color: var(--text-main);
-            background-color: var(--bg-light);
-            line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
-        }
+                body {
+                    color: var(--text-main);
+                    background-color: var(--bg-light);
+                    /* line-height: 1.7; */
+                    -webkit-font-smoothing: antialiased;
+                }
 
 
                 /* Section Hero (Visuel IA / Abstrait Corporate Lumineux) */
                 .hero {
                     position: relative;
-                    background-image: linear-gradient(135deg, rgba(11, 37, 69,
-        0.92) 0%, rgba(19, 49, 92, 0.85) 100%),
-        url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1920&q=80');
+                    background-image: linear-gradient(135deg, rgba(11, 37, 69, 0.92) 0%, rgba(19, 49, 92, 0.85) 100%),
+                    url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1920&q=80');
                     background-size: cover;
                     background-position: center;
                     color: var(--white);
@@ -75,7 +78,7 @@
 
                 .hero-buttons {
                     display: flex;
-                    gap: 1.2rem;
+                    /* gap: 1.2rem; */
                     align-items: center;
                 }
 
@@ -145,7 +148,7 @@
                 .services-grid {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
-                    gap: 1.5rem;
+                    /* gap: 1.5rem; */
                 }
 
                 .service-card {
@@ -238,7 +241,7 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 5rem;
+            /* gap: 5rem; */
             align-items: center;
         }
 
@@ -296,7 +299,7 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 3rem;
+            /* gap: 3rem; */
             position: relative;
             z-index: 2;
         }
@@ -349,19 +352,19 @@
             font-size: 0.95rem;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            /* gap: 0.5rem; */
             transition: var(--transition-smooth);
         }
 
         .insights-all:hover {
             color: var(--accent);
-            gap: 0.8rem;
+            /* gap: 0.8rem; */
         }
 
         .insights-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+            /* gap: 2rem; */
         }
 
         .insight-card {
@@ -448,7 +451,7 @@
         .form-group {
             display: flex;
             flex-direction: column;
-            gap: 0.6rem;
+            /* gap: 0.6rem; */
         }
 
         .form-group label {
@@ -459,7 +462,7 @@
 
         .form-row {
             display: flex;
-            gap: 0.8rem;
+            /* gap: 0.8rem; */
         }
 
         .form-row input {
@@ -491,7 +494,7 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1.5fr;
-            gap: 3rem;
+            /* gap: 3rem; */
             margin-bottom: 4rem;
         }
 
@@ -539,7 +542,7 @@
 
         .footer-bottom-links {
             display: flex;
-            gap: 2rem;
+            /* gap: 2rem; */
         }
 
         .footer-bottom-links a {
@@ -654,12 +657,12 @@
             box-shadow: 0 20px 60px rgba(0,0,0,0.5);
         }
 
-</style>
+    </style>
 </head>
 <body>
 
     <!-- En-tête / Navbar avec menus déroulants -->
-   <header class="flex items-center justify-between px-6 lg:px-12 py-5 border-b border-gray-800 bg-[#ffff] text-[#0b131d]">
+    <header class="flex items-center justify-between px-6 lg:px-12 py-5 border-b border-gray-800 bg-[#ffff] text-[#0b131d]">
         <div class="flex items-center space-x-2">
             <div class="text-blue-500 font-bold text-xl tracking-wider flex items-center">
                 <a href="/" class="logo-area">
@@ -682,68 +685,68 @@
     <!-- Section 1 : Hero -->
     <section class="hero">
         <div class="hero-content">
-            <h1>À vos côtés, quand les chiffres engagent l'avenir.</h1>
-            <p>Expertise comptable, audit et conseil stratégique pour les organisations qui évoluent au Sénégal et dans l'espace OHADA.</p>
+            <h1>{{ __('messages.À vos côtés, quand les chiffres engagent l\'avenir.') }}</h1>
+            <p>{{ __('messages.Expertise comptable, audit et conseil stratégique pour les organisations qui évoluent au Sénégal et dans l\'espace OHADA.') }}</p>
             <div class="hero-buttons">
-                <a href="contact" class="btn-primary">Prendre rendez-vous &rarr;</a>
-                <a href="serviceaccompagnement" class="btn-outline">Découvrir nos expertises</a>
+                <a href="contact" class="btn-primary">{{ __('messages.Prendre rendez-vous &rarr;') }}</a>
+                <a href="serviceaccompagnement" class="btn-outline">{{ __('messages.Découvrir nos expertises') }}</a>
             </div>
         </div>
     </section>
 
     <!-- Section 2 : Nos lignes de service -->
     <section class="services-section">
-        <div class="section-tag">NOS LIGNES DE SERVICE</div>
+        <div class="section-tag">{{ __('messages.NOS LIGNES DE SERVICE') }}</div>
         <div class="section-header-row">
-            <h2>Une offre complète pour piloter la performance</h2>
+            <h2>{{ __('messages.Une offre complète pour piloter la performance') }}</h2>
         </div>
         <div class="services-grid">
             <a href="expertisecomptable" class="service-card">
                 <div class="service-number">01</div>
                 <div class="service-title-row">
-                    <h3>Expertise comptable</h3>
+                    <h3>{{ __('messages.Expertise comptable') }}</h3>
                     <span class="service-arrow">→</span>
                 </div>
             </a>
             <a href="audit" class="service-card">
                 <div class="service-number">02</div>
                 <div class="service-title-row">
-                    <h3>Audit & commissariat aux comptes</h3>
+                    <h3>{{ __('messages.Audit & commissariat aux comptes') }}</h3>
                     <span class="service-arrow">→</span>
                 </div>
             </a>
             <a href="fiscalité" class="service-card">
                 <div class="service-number">03</div>
                 <div class="service-title-row">
-                    <h3>Fiscalité & conformité</h3>
+                    <h3>{{ __('messages.Fiscalité & conformité') }}</h3>
                     <span class="service-arrow">→</span>
                 </div>
             </a>
             <a href="conseiletorganisation" class="service-card">
                 <div class="service-number">04</div>
                 <div class="service-title-row">
-                    <h3>Conseil & organisation</h3>
+                    <h3>{{ __('messages.Conseil & organisation') }}</h3>
                     <span class="service-arrow">→</span>
                 </div>
             </a>
             <a href="paieetsocial" class="service-card">
                 <div class="service-number">05</div>
                 <div class="service-title-row">
-                    <h3>Paie & social</h3>
+                    <h3>{{ __('messages.Paie & social') }}</h3>
                     <span class="service-arrow">→</span>
                 </div>
             </a>
             <a href="conseilfinancier" class="service-card">
                 <div class="service-number">06</div>
                 <div class="service-title-row">
-                    <h3>Conseil Financier</h3>
+                    <h3>{{ __('messages.Conseil Financier') }}</h3>
                     <span class="service-arrow">→</span>
                 </div>
             </a>
             <a href="assistancejuridique" class="service-card" style="grid-column: span 3;">
                 <div class="service-number">07</div>
                 <div class="service-title-row">
-                    <h3>Assistance Juridique</h3>
+                    <h3>{{ __('messages.Assistance Juridique') }}</h3>
                     <span class="service-arrow">→</span>
                 </div>
             </a>
@@ -758,8 +761,8 @@
             </div>
             <div class="split-content">
                 <div class="section-tag">P2A PARTNERS</div>
-                <h2>La relation d'abord.</h2>
-                <p>Nous travaillons au plus près des dirigeants et de leurs équipes. Un interlocuteur responsable, des échanges directs et des livrables conçus pour être immédiatement opérationnels : notre méthode commence par l'écoute active et se mesure dans l'action concrète.</p>
+                <h2>{{ __('messages.La relation d\'abord.') }}</h2>
+                <p>{{ __('messages.Nous travaillons au plus près des dirigeants et de leurs équipes. Un interlocuteur responsable, des échanges directs et des livrables conçus pour être immédiatement opérationnels : notre méthode commence par l\'écoute active et se mesure dans l\'action concrète.') }}</p>
             </div>
         </div>
     </section>
@@ -772,8 +775,8 @@
             </div>
             <div class="split-content">
                 <div class="section-tag">P2A PARTNERS</div>
-                <h2>Une expertise locale. Des standards internationaux.</h2>
-                <p>Parce que vos ambitions ne s'arrêtent pas aux frontières, notre cabinet combine un ancrage territorial fort et une maîtrise pointue des normes internationales (IFRS, réglementations globales). Nous transformons la complexité réglementaire en levier de performance.</p>
+                <h2>{{ __('messages.Une expertise locale. Des standards internationaux.') }}</h2>
+                <p>{{ __('messages.Parce que vos ambitions ne s\'arrêtent pas aux frontières, notre cabinet combine un ancrage territorial fort et une maîtrise pointue des normes internationales (IFRS, réglementations globales). Nous transformons la complexité réglementaire en levier de performance.') }}</p>
             </div>
         </div>
     </section>
@@ -787,11 +790,11 @@
             </div>
             <div class="stat-box">
                 <div class="stat-number">7</div>
-                <div class="stat-label">Lignes de service coordonnées en synergie</div>
+                <div class="stat-label">{{ __('messages.Lignes de service coordonnées en synergie') }}</div>
             </div>
             <div class="stat-box">
-                <div class="stat-number" style="font-size: 2.5rem; padding-top: 0.3rem;">OHADA & Monde</div>
-                <div class="stat-label">Une expertise locale ouverte sur l'international</div>
+                <div class="stat-number" style="font-size: 2.5rem; padding-top: 0.3rem;">{{ __('messages.OHADA & Monde') }}</div>
+                <div class="stat-label">{{ __('messages.Une expertise locale ouverte sur l\'international') }}</div>
             </div>
         </div>
     </section>
@@ -800,32 +803,32 @@
     <section class="insights-section">
         <div class="insights-header">
             <div>
-                <div class="section-tag" style="margin-bottom: 0;">INSIGHTS</div>
-                <h2>Points de vue utiles</h2>
-                <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.5rem;">Analyses stratégiques pour comprendre les règles, anticiper les risques et structurer vos décisions.</p>
+                <div class="section-tag" style="margin-bottom: 0;">{{ __('messages.INSIGHTS') }}</div>
+                <h2>{{ __('messages.Points de vue utiles') }}</h2>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.5rem;">{{ __('messages.Analyses stratégiques pour comprendre les règles, anticiper les risques et structurer vos décisions.') }}</p>
             </div>
-            <a href="insights" class="insights-all">Tous les articles →</a>
+            <a href="insights" class="insights-all">{{ __('messages.Tous les articles →') }}</a>
         </div>
         <div class="insights-grid">
             <a href="insights#btn-fiscalite" class="insight-card">
                 <div>
-                    <span class="insight-tag">FISCALITÉ</span>
-                    <h3>Fiscalité sénégalaise : préparer un contrôle avant l'avis</h3>
+                    <span class="insight-tag">{{ __('messages.FISCALITÉ') }}</span>
+                    <h3>{{ __('messages.Fiscalité sénégalaise : préparer un contrôle avant l\'avis') }}</h3>
                     <p>Une documentation rigoureuse réduit l'incertitude et fluidifie le dialogue avec l'administration.</p>
                 </div>
             </a>
             <a href="insights#btn-syscohada" class="insight-card">
                 <div>
-                    <span class="insight-tag">SYSCOHADA</span>
-                    <h3>Clôture SYSCOHADA : organiser un calendrier réellement utile</h3>
+                    <span class="insight-tag">{{ __('messages.SYSCOHADA') }}</span>
+                    <h3>{{ __('messages.Clôture SYSCOHADA : organiser un calendrier réellement utile') }}</h3>
                     <p>Structurez les responsabilités pour sécuriser la qualité de vos états financiers.</p>
                 </div>
             </a>
             <a href="insights#btn-ifrs" class="insight-card">
                 <div>
-                    <span class="insight-tag">IFRS</span>
-                    <h3>IFRS 18 remplace IAS 1 : ce qui change dans la performance</h3>
-                    <p>Nouveaux sous-totaux et indicateurs encadrés : les points clés à préparer avant 2027.</p>
+                    <span class="insight-tag">{{ __('messages.IFRS') }}</span>
+                    <h3>{{ __('messages.IFRS 18 remplace IAS 1 : ce qui change dans la performance') }}</h3>
+                    <p>{{ __('messages.Nouveaux sous-totaux et indicateurs encadrés : les points clés à préparer avant 2027.') }}</p>
                 </div>
             </a>
         </div>
@@ -835,18 +838,18 @@
     <section class="newsletter-section">
         <div class="newsletter-container">
             <div class="newsletter-content">
-                <div class="section-tag">NEWSLETTER</div>
-                <h2>Recevez nos prochaines analyses</h2>
-                <p>Une veille comptable, fiscale et financière de haute précision envoyée à fréquence mesurée.</p>
+                <div class="section-tag">{{ __('messages.NEWSLETTER') }}</div>
+                <h2>{{ __('messages.Recevez nos prochaines analyses') }}</h2>
+                <p>{{ __('messages.Une veille comptable, fiscale et financière de haute précision envoyée à fréquence mesurée.') }}</p>
             </div>
             <div class="newsletter-form">
                 <div class="form-group">
-                    <label for="email">Votre adresse email professionnelle</label>
+                    <label for="email">{{ __('messages.Votre adresse email professionnelle') }}</label>
                     <div class="form-row">
                         <input type="email" id="email" placeholder="nom@entreprise.com">
                         </div>
                         <div class="form-row">
-                        <a href="#" class="btn btn-primary" style="border-radius: 6px;">S'inscrire</a>
+                        <a href="#" class="btn btn-primary" style="border-radius: 6px;">{{ __('messages.S\'inscrire') }}</a>
                     </div>
                 </div>
             </div>
@@ -857,40 +860,40 @@
     <footer>
         <div class="footer-container">
             <div class="footer-col">
-                <h4>P2A PARTNERS</h4>
-                <p>Expertise Comptable, Audit et Conseil stratégique pour accompagner durablement les organisations au Sénégal et à l'international.</p>
+                <h4>{{ __('messages.P2A PARTNERS') }}</h4>
+                <p>{{ __('messages.Expertise Comptable, Audit et Conseil stratégique pour accompagner durablement les organisations au Sénégal et à l\'international.') }}</p>
             </div>
             <div class="footer-col">
-                <h4>Expertises</h4>
+                <h4>{{ __('messages.Expertises') }}</h4>
                 <ul>
-                    <li><a href="expertisecomptable">Expertise comptable</a></li>
-                    <li><a href="audit">Audit & commissariat</a></li>
-                    <li><a href="fiscalité">Fiscalité & conformité</a></li>
-                    <li><a href="conseiletorganisation">Conseil & organisation</a></li>
+                    <li><a href="expertisecomptable">{{ __('messages.Expertise comptable') }}</a></li>
+                    <li><a href="audit">{{ __('messages.Audit & commissariat') }}</a></li>
+                    <li><a href="fiscalité">{{ __('messages.Fiscalité & conformité') }}</a></li>
+                    <li><a href="conseiletorganisation">{{ __('messages.Conseil & organisation') }}</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Cabinet</h4>
+                <h4>{{ __('messages.Cabinet') }}</h4>
                 <ul>
-                    <li><a href="apropos">Qui nous sommes</a></li>
-                    <li><a href="actualites">Actualités</a></li>
-                    <li><a href="carrières">Carrières</a></li>
-                    <li><a href="contact">Contact</a></li>
+                    <li><a href="apropos">{{ __('messages.Qui nous sommes') }}</a></li>
+                    <li><a href="actualites">{{ __('messages.Actualités') }}</a></li>
+                    <li><a href="carrières">{{ __('messages.Carrières') }}</a></li>
+                    <li><a href="contact">{{ __('messages.Contact') }}</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Bureau de Dakar</h4>
-                <p>Villa n° 90, Sacré-Cœur 3<br>Dakar,
+                <h4>{{ __('messages.Bureau de Dakar') }}</h4>
+                <p>{{ __('messages.Villa n° 90, Sacré-Cœur 3<br>Dakar,') }}
 Sénégal<br>contact@p2apartners.com</p>
                 <p style="margin-top: 1rem; font-size: 0.8rem; color:
-#93c5fd;">Membre de l'ONECCA</p>
+#93c5fd;">{{ __('messages.Membre de l\'ONECCA') }}</p>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 P2A Partners. Tous droits réservés.</p>
             <div class="footer-bottom-links">
-                <a href="#">Mentions légales</a>
-                <a href="#">Politique de confidentialité</a>
+                <a href="#">{{ __('messages.Mentions légales') }}</a>
+                <a href="#">{{ __('messages.Politique de confidentialité') }}</a>
             </div>
         </div>
     </footer>

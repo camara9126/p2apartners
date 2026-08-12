@@ -101,10 +101,10 @@
         <div class="relative z-10 max-w-4xl">
             <p class="text-xs font-bold tracking-widest text-gray-400 uppercase mb-3">P2A PARTNERS</p>
             <h1 class="font-editorial text-4xl sm:text-6xl lg:text-7xl font-normal leading-[1.1] mb-6">
-                Actualités
+                {{ __('messages.Actualités') }}
             </h1>
             <p class="text-lg lg:text-xl text-gray-300 font-light max-w-2xl leading-relaxed">
-                Retrouvez les informations, événements et temps forts de P2A Partners.
+                {{ __('messages.Retrouvez les informations, événements et temps forts de P2A Partners.') }}
             </p>
         </div>
     </section>
@@ -114,8 +114,8 @@
         <div class="max-w-7xl mx-auto">
             <div class="flex justify-between items-center mb-6">
                 <div>
-                    <h2 class="text-xl font-semibold">Tableau de bord - Gestion des Actualités</h2>
-                    <p class="text-xs text-gray-400">Publiez ou supprimez des actualités reliées dynamiquement à la page.</p>
+                    <h2 class="text-xl font-semibold">{{ __('messages.Tableau de bord - Gestion des Actualités') }}</h2>
+                    <p class="text-xs text-gray-400">{{ __('messages.Publiez ou supprimez des actualités reliées dynamiquement à la page.') }}</p>
                 </div>
                 <button onclick="toggleDashboard()" class="text-gray-400 hover:text-white text-xs">Fermer ✕</button>
             </div>
@@ -188,7 +188,7 @@
                     <span class="text-sm font-extrabold text-white">P2A PARTNERS</span>
                 </div>
                 <p class="text-xs text-gray-400 leading-relaxed">
-                    Expertise Comptable, Audit et Conseils pour les organisations au Sénégal et partout dans le monde.
+                    {{ __('messages.Expertise Comptable, Audit et Conseils pour les organisations au Sénégal et partout dans le monde.') }}
                 </p>
             </div>
             <div>

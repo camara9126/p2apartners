@@ -38,12 +38,33 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
+// Route pour changer la langue
+Route::get('/language/{locale}', function ($locale) {
+
+    if (!in_array($locale, ['fr', 'en'])) {
+        abort(400);
+    }
+
+    session()->put('locale', $locale);
+
+    App::setLocale($locale);
+
+    return redirect()->back();
+
+})->name('language.switch');
+
+
 // Accueil
 Route::get('/', function () {
-    $posts= Post::with('categorie')->latest()->get();
 
-    return view('p2A.home', compact('posts'));
+    return view('p2A.index');
 })->name('accueil');
+
+// test
+Route::get('/test', function () {
+
+    return view('p2A.home');
+});
 
 // Apropos 
 Route::get('apropos', function () {
@@ -141,7 +162,7 @@ Route::get('industriesetmines', function () {
 
 // insight fiscalite
 Route::get('insightfiscalite', function () {
-    return view('p2A.insightfiscalité');
+    return view('p2A.insightfiscalite');
 });
 
 // insights
