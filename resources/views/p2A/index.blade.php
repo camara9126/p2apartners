@@ -4,9 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5" />
     <title>P2A Partners · Expertise Comptable Sénégal & OHADA</title>
-
-    <!-- Bootstrap 5 + Tailwind -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Favicon -->
@@ -706,20 +704,20 @@
     <!-- ===== HERO ===== -->
     <section class="hero">
         <div class="max-w-6xl mx-auto">
-            <h1>À vos côtés, quand les chiffres engagent l'avenir.</h1>
-            <p>Expertise comptable, audit et conseil stratégique pour les organisations qui évoluent au Sénégal et dans l'espace OHADA.</p>
+            <h1>{{ __('messages.À vos côtés, quand les chiffres engagent l\'avenir.') }}</h1>
+            <p>{{ __('messages.Expertise comptable, audit et conseil stratégique pour les organisations qui évoluent au Sénégal et dans l\'espace OHADA.') }}</p>
             <div class="hero-buttons">
-                <a href="contact" class="btn-primary">Prendre rendez-vous →</a>
-                <a href="serviceaccompagnement" class="btn-outline">Découvrir nos expertises</a>
+                <a href="contact" class="btn-primary">{{ __('messages.Prendre rendez-vous') }} →</a>
+                <a href="serviceaccompagnement" class="btn-outline">{{ __('messages.Découvrir nos expertises') }}</a>
             </div>
         </div>
     </section>
 
     <!-- ===== SERVICES ===== -->
     <section class="py-12 px-4 max-w-7xl mx-auto">
-        <div class="section-tag">NOS LIGNES DE SERVICE</div>
+        <div class="section-tag">{{ __('messages.NOS LIGNES DE SERVICE') }}</div>
         <div class="section-header mb-8">
-            <h2>Une offre complète pour piloter la performance</h2>
+            <h2>{{ __('messages.Une offre complète pour piloter la performance') }}</h2>
         </div>
 
         <div class="services-grid">
@@ -783,8 +781,8 @@
             </div>
             <div class="split-content">
                 <div class="section-tag">P2A PARTNERS</div>
-                <h2>La relation d'abord.</h2>
-                <p>Nous travaillons au plus près des dirigeants et de leurs équipes. Un interlocuteur responsable, des échanges directs et des livrables conçus pour être immédiatement opérationnels : notre méthode commence par l'écoute active et se mesure dans l'action concrète.</p>
+                <h2>{{ __('messages.La relation d\'abord.')}}</h2>
+                <p>{{ __('messages.Nous travaillons au plus près des dirigeants et de leurs équipes. Un interlocuteur responsable, des échanges directs et des livrables conçus pour être immédiatement opérationnels : notre méthode commence par l\'écoute active et se mesure dans l\'action concrète.') }}</p>
             </div>
         </div>
     </section>
@@ -797,8 +795,8 @@
             </div>
             <div class="split-content">
                 <div class="section-tag">P2A PARTNERS</div>
-                <h2>Une expertise locale. Des standards internationaux.</h2>
-                <p>Parce que vos ambitions ne s'arrêtent pas aux frontières, notre cabinet combine un ancrage territorial fort et une maîtrise pointue des normes internationales (IFRS, réglementations globales). Nous transformons la complexité réglementaire en levier de performance.</p>
+                <h2>{{ __('messages.Une expertise locale. Des standards internationaux.')}}</h2>
+                <p>{{ __('messages.Parce que vos ambitions ne s\'arrêtent pas aux frontières, notre cabinet combine un ancrage territorial fort et une maîtrise pointue des normes internationales (IFRS, réglementations globales). Nous transformons la complexité réglementaire en levier de performance.') }}</p>
             </div>
         </div>
     </section>
@@ -808,15 +806,15 @@
         <div class="stats-container">
             <div class="stat-box">
                 <div class="stat-number">20+</div>
-                <div class="stat-label">Années d'expérience cumulée des associés</div>
+                <div class="stat-label">{{ __('messages.Années d\'expérience cumulée des associés') }}</div>
             </div>
             <div class="stat-box">
                 <div class="stat-number">7</div>
-                <div class="stat-label">Lignes de service coordonnées en synergie</div>
+                <div class="stat-label">{{ __('messages.Lignes de service coordonnées en synergie') }}</div>
             </div>
             <div class="stat-box">
-                <div class="stat-number" style="font-size: 2.2rem;">OHADA &amp; Monde</div>
-                <div class="stat-label">Une expertise locale ouverte sur l'international</div>
+                <div class="stat-number" style="font-size: 2.5rem; padding-top: 0.3rem;">{{ __('messages.OHADA & Monde') }}</div>
+                <div class="stat-label">{{ __('messages.Une expertise locale ouverte sur l\'international') }}</div>
             </div>
         </div>
     </section>
@@ -826,35 +824,35 @@
         <div class="max-w-7xl mx-auto">
             <div class="insights-header">
                 <div>
-                    <div class="section-tag">INSIGHTS</div>
-                    <h2>Points de vue utiles</h2>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">Analyses stratégiques pour comprendre les règles, anticiper les risques et structurer vos décisions.</p>
+                    <div class="section-tag">{{ __('messages.INSIGHTS') }}</div>
+                    <h2>{{ __('messages.Points de vue utiles') }}</h2>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">{{ __('messages.Analyses stratégiques pour comprendre les règles, anticiper les risques et structurer vos décisions.') }}</p>
                 </div>
-                <a href="insights" class="insights-all">Tous les articles →</a>
+                <a href="insights" class="insights-all">{{ __('messages.Tous les articles') }} →</a>
             </div>
-            <div class="insights-grid">
-                <a href="insights#btn-fiscalite" class="insight-card">
-                    <div>
-                        <span class="insight-tag">FISCALITÉ</span>
-                        <h3>Fiscalité sénégalaise : préparer un contrôle avant l'avis</h3>
-                        <p>Une documentation rigoureuse réduit l'incertitude et fluidifie le dialogue avec l'administration.</p>
-                    </div>
-                </a>
-                <a href="insights#btn-syscohada" class="insight-card">
-                    <div>
-                        <span class="insight-tag">SYSCOHADA</span>
-                        <h3>Clôture SYSCOHADA : organiser un calendrier réellement utile</h3>
-                        <p>Structurez les responsabilités pour sécuriser la qualité de vos états financiers.</p>
-                    </div>
-                </a>
-                <a href="insights#btn-ifrs" class="insight-card">
-                    <div>
-                        <span class="insight-tag">IFRS</span>
-                        <h3>IFRS 18 remplace IAS 1 : ce qui change dans la performance</h3>
-                        <p>Nouveaux sous-totaux et indicateurs encadrés : les points clés à préparer avant 2027.</p>
-                    </div>
-                </a>
-            </div>
+        <div class="insights-grid">
+            <a href="insights#btn-fiscalite" class="insight-card">
+                <div>
+                    <span class="insight-tag">{{ __('messages.FISCALITÉ') }}</span>
+                    <h3>{{ __('messages.Fiscalité sénégalaise : préparer un contrôle avant l\'avis') }}</h3>
+                    <p>{{ __('messages.Une documentation rigoureuse réduit l\'incertitude et fluidifie le dialogue avec l\'administration.') }}</p>
+                </div>
+            </a>
+            <a href="insights#btn-syscohada" class="insight-card">
+                <div>
+                    <span class="insight-tag">{{ __('messages.SYSCOHADA') }}</span>
+                    <h3>{{ __('messages.Clôture SYSCOHADA : organiser un calendrier réellement utile') }}</h3>
+                    <p>{{ __('messages.Structurez les responsabilités pour sécuriser la qualité de vos états financiers.') }}</p>
+                </div>
+            </a>
+            <a href="insights#btn-ifrs" class="insight-card">
+                <div>
+                    <span class="insight-tag">{{ __('messages.IFRS') }}</span>
+                    <h3>{{ __('messages.IFRS 18 remplace IAS 1 : ce qui change dans la performance') }}</h3>
+                    <p>{{ __('messages.Nouveaux sous-totaux et indicateurs encadrés : les points clés à préparer avant 2027.') }}</p>
+                </div>
+            </a>
+        </div>
         </div>
     </section>
 
@@ -862,56 +860,59 @@
     <section class="newsletter-section">
         <div class="newsletter-container">
             <div class="newsletter-content">
-                <div class="section-tag">NEWSLETTER</div>
-                <h2>Recevez nos prochaines analyses</h2>
-                <p>Une veille comptable, fiscale et financière de haute précision envoyée à fréquence mesurée.</p>
+                <div class="section-tag">{{ __('messages.NEWSLETTER') }}</div>
+                <h2>{{ __('messages.Recevez nos prochaines analyses') }}</h2>
+                <p>{{ __('messages.Une veille comptable, fiscale et financière de haute précision envoyée à fréquence mesurée.') }}</p>
             </div>
             <div class="newsletter-form">
                 <div class="form-group">
-                    <label for="email">Votre adresse email professionnelle</label>
+                    <label for="email">{{ __('messages.Votre adresse email professionnelle') }}</label>
                     <div class="form-row">
-                        <input type="email" id="email" placeholder="nom@entreprise.com" />
-                        <button class="btn-subscribe">S'inscrire</button>
+                        <input type="email" id="email" placeholder="nom@entreprise.com">
+                        </div>
+                        <div class="form-row">
+                        <a href="#" class="btn btn-primary" style="border-radius: 6px;">{{ __('messages.S\'inscrire') }}</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    
     <!-- ===== FOOTER ===== -->
     <footer>
         <div class="footer-grid">
             <div class="footer-col">
                 <h4>P2A PARTNERS</h4>
-                <p>Expertise Comptable, Audit et Conseil stratégique pour accompagner durablement les organisations au Sénégal et à l'international.</p>
+                <p>{{ __('messages.Expertise Comptable, Audit et Conseil stratégique pour accompagner durablement les organisations au Sénégal et à l\'international.') }}</p>
             </div>
             <div class="footer-col">
-                <h4>Expertises</h4>
+                <h4>{{ __('messages.Expertises') }}</h4>
                 <ul>
-                    <li><a href="expertisecomptable">Expertise comptable</a></li>
-                    <li><a href="audit">Audit &amp; commissariat</a></li>
-                    <li><a href="fiscalité">Fiscalité &amp; conformité</a></li>
-                    <li><a href="conseiletorganisation">Conseil &amp; organisation</a></li>
+                    <li><a href="expertisecomptable">{{ __('messages.Expertise comptable') }}</a></li>
+                    <li><a href="audit">{{ __('messages.Audit & commissariat aux comptes') }}</a></li>
+                    <li><a href="fiscalité">{{ __('messages.Fiscalité & conformité') }}</a></li>
+                    <li><a href="conseiletorganisation">{{ __('messages.Conseil & organisation') }}</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Cabinet</h4>
+                <h4>{{ __('messages.Cabinet') }}</h4>
                 <ul>
-                    <li><a href="apropos">Qui nous sommes</a></li>
-                    <li><a href="actualites">Actualités</a></li>
-                    <li><a href="carrières">Carrières</a></li>
-                    <li><a href="contact">Contact</a></li>
+                    <li><a href="apropos">{{ __('messages.Qui nous sommes') }}</a></li>
+                    <li><a href="actualites">{{ __('messages.Actualités') }}</a></li>
+                    <li><a href="carrières">{{ __('messages.Carrières') }}</a></li>
+                    <li><a href="contact">{{ __('messages.Contact') }}</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Bureau de Dakar</h4>
+                <h4>{{ __('messages.Bureau de Dakar') }}</h4>
                 <p>Villa n° 90, Sacré-Cœur 3<br />Dakar, Sénégal<br />contact@p2apartners.com</p>
-                <p style="margin-top: 0.8rem; font-size:0.8rem; color:#93c5fd;">Membre de l'ONECCA</p>
+                <p style="margin-top: 0.8rem; font-size:0.8rem; color:#93c5fd;">{{ __('messages.Membre de l\'ONECCA') }}</p>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 P2A Partners. Tous droits réservés.</p>
+            <p>{{ __('messages.&copy; 2026 P2A Partners. Tous droits réservés.') }}</p>
             <div class="footer-bottom-links">
                 <a href="#">Mentions légales</a>
                 <a href="#">Politique de confidentialité</a>
@@ -947,59 +948,71 @@
                     <!-- Dropdown 1 : Qui nous accompagnons -->
                     <div class="mobile-dropdown">
                         <button class="mobile-dropdown-toggle w-full text-left text-sm hover: text-[#0b131d] py-2 flex items-center justify-between focus:outline-none">
-                            <span>Qui nous accompagnons</span>
+                            <span>{{ __('messages.Qui nous accompagnons') }}</span>
                             <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
                         <div class="mobile-submenu hidden pl-4 space-y-1">
-                            <a href="servicesfinanciers" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Services financiers</a>
-                            <a href="industriesetmines" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Industries & mines</a>
-                            <a href="automobile" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Automobile</a>
-                            <a href="telecometmultimedia" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Télécom & multimédia</a>
-                            <a href="transportetlogistique" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Transport & logistique</a>
-                            <a href="serviceaccompagnement" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Services</a>
-                            <a href="ongetsecteur" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">ONG & secteur public</a>
+                            <a href="servicesfinanciers" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">{{ __('messages.Services financiers') }}</a>
+                            <a href="industriesetmines" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">{{ __('messages.Industries & mines') }}</a>
+                            <a href="automobile" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">{{ __('messages.Automobile') }}</a>
+                            <a href="telecometmultimedia" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">{{ __('messages.Télécom & multimédia') }}</a>
+                            <a href="transportetlogistique" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">{{ __('messages.Transport & logistique') }}</a>
+                            <a href="serviceaccompagnement" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">{{ __('messages.Services') }}</a>
+                            <a href="ongetsecteur" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">{{ __('messages.ONG & secteur public') }}</a>
                         </div>
                     </div>
 
                     <!-- Dropdown 2 : Ce que nous faisons -->
                     <div class="mobile-dropdown">
                         <button class="mobile-dropdown-toggle w-full text-left text-sm hover: bg-[#ffff] text-[#0b131d] py-2 flex items-center justify-between focus:outline-none">
-                            <span>Ce que nous faisons</span>
+                            <span>{{ __('messages.Ce que nous faisons') }}</span>
                             <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
                         <div class="mobile-submenu hidden pl-4 space-y-1">
-                            <a href="expertisecomptable" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Expertise comptable</a>
-                            <a href="audit" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Audit & commissariat aux comptes</a>
-                            <a href="fiscalité" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Fiscalité & conformité</a>
-                            <a href="conseiletorganisation" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Conseil & organisation</a>
-                            <a href="paieetsocial" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Paie & social</a>
-                            <a href="conseilfinancier" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Conseil Financier</a>
-                            <a href="assistancejuridique" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Assistance Juridique</a>
+                            <a href="expertisecomptable" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">{{ __('messages.Expertise comptable') }}</a>
+                            <a href="audit" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">{{ __('messages.Audit & commissariat aux comptes') }}</a>
+                            <a href="fiscalité" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">{{ __('messages.Fiscalité & conformité') }}</a>
+                            <a href="conseiletorganisation" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">{{ __('messages.Conseil & organisation') }}</a>
+                            <a href="paieetsocial" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">{{ __('messages.Paie & social') }}</a>
+                            <a href="conseilfinancier" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">{{ __('messages.Conseil Financier') }}</a>
+                            <a href="assistancejuridique" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">{{ __('messages.Assistance Juridique') }}</a>
                         </div>
                     </div>
 
                     <!-- Dropdown 3 : Qui nous sommes -->
                     <div class="mobile-dropdown">
                         <button class="mobile-dropdown-toggle w-full text-left text-sm hover: bg-[#ffff] text-[#0b131d] py-2 flex items-center justify-between focus:outline-none">
-                            <span>Qui nous sommes</span>
+                            <span>{{ __('messages.Qui nous sommes') }}</span>
                             <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
                         <div class="mobile-submenu hidden pl-4 space-y-1">
-                            <a href="apropos" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Qui nous sommes</a>
-                            <a href="carrières" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">Carrières</a>
+                            <a href="apropos" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">{{ __('messages.Qui nous sommes') }}</a>
+                            <a href="carrières" class="block px-3 py-2 text-xs bg-[#ffff] text-[#0b131d] hover:text-white hover:bg-gray-800 rounded transition-colors">{{ __('messages.Carrières') }}</a>
                         </div>
                     </div>
 
                     <!-- Liens simples -->
-                    <a href="insights" class="block text-sm bg-[#ffff] text-[#0b131d] hover:text-white py-2">Insights</a>
-                    <a href="actualites" class="block text-sm bg-[#ffff] text-[#0b131d] hover:text-white py-2">Actualités</a>
-                    <a href="contact" class="block text-sm bg-[#ffff] text-[#0b131d] hover:text-white py-2">Contact</a>
+                    <a href="insights" class="block text-sm bg-[#ffff] text-[#0b131d] hover:text-white py-2">{{ __('messages.Insights') }}</a>
+                    <a href="actualites" class="block text-sm bg-[#ffff] text-[#0b131d] hover:text-white py-2">{{ __('messages.Actualités') }}</a>
+                    <a href="contact" class="block text-sm bg-[#ffff] text-[#0b131d] hover:text-white py-2">{{ __('messages.Contact') }}</a>
+                    <!-- Langue -->
+                    <div class="flex items-center space-x-4 bg-[#0b131d] px-4 py-2 rounded-md">
+                        <span class="text-xs text-gray-300">
+                            <a href="{{ route('language.switch', 'fr') }}">
+                                <strong class="text-white">FR</strong>
+                            </a>
+                            |
+                            <a href="{{ route('language.switch', 'en') }}">
+                                <strong class="text-white">EN</strong>
+                            </a>
+                        </span>
+                    </div>
                 </div>
             `;
             

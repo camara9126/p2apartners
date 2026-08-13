@@ -52,7 +52,7 @@
             <a href="actualites" class="text-[#0b131d] hover:text-gray-400"> {{ __('messages.Actualités') }} </a>
             <a href="contact" class="text-[#0b131d] hover:text-gray-400"> {{ __('messages.Contact') }} </a>
 
-             <!-- Langue -->
+            <!-- Langue -->
             <div class="flex items-center space-x-4 bg-[#0b131d] px-4 py-2 rounded-md">
                 <span class="text-xs text-gray-300">
                     <a href="{{ route('language.switch', 'fr') }}">
